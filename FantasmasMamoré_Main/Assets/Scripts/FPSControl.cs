@@ -85,7 +85,7 @@ public class FPSControl : MonoBehaviour {
         else if(Globals.playerProgress == 2)
         {
             UnlockMovement();
-            cutscene.WideScreenOutF();
+            cutscene.WideScreenInF();
             killme.Ato1.SetActive(false);
             TeleportPlayer(260, 55, 334, 0, -91, 0);
         }
