@@ -145,31 +145,32 @@ public class FPSControl : MonoBehaviour {
 
     public void Run()
     {
-        Debug.Log("Running");
-        
-        speedfactor = speedfactor + acceleration;
-        speed = speedfactor * 2f;
-        speedfactor = Mathf.Clamp(speedfactor, 1, 3);
-        if(speedfactor >= 2.4f)
-        CameraRun.speed = Mathf.Round(speedfactor * 5);
+        //Debug.Log("Running");
+
+        //speedfactor = speedfactor + acceleration;
+        //speed = speedfactor * 2f;
+        speed = 6f;
+        //speedfactor = Mathf.Clamp(speedfactor, 1, 3);
+        //if(speedfactor >= 2.4f)
+        CameraRun.speed = Mathf.Round(3 * 5);
     }
 
     IEnumerator Stoprun()
     {
-        while (true)
-        {
+        //while (true)
+        //{
             Debug.Log("Stopping");
-            speedfactor = speedfactor - (acceleration*3);
-            speed = speedfactor * 1.6f;
-            speedfactor = Mathf.Clamp(speedfactor, 1, 3);
-            if (speedfactor == 1)
-            {
-                StopCoroutine(lastCoroutine);
-                speed = 2.4f;
-            }
+          //  speedfactor = speedfactor - (acceleration*3);
+            //speed = speedfactor * 1.6f;
+            //speedfactor = Mathf.Clamp(speedfactor, 1, 3);
+            //if (speedfactor == 1)
+            //{
+              //  StopCoroutine(lastCoroutine);
+                speed = 2.6f;
+            //}
 
             yield return new WaitForSeconds(0.1f);
-        }
+        
     }
 
     public void UnlockMovement()
