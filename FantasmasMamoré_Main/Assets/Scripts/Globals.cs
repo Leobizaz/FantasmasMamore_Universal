@@ -25,7 +25,7 @@ public class Globals : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {
             if (Time.timeScale == 1)
             {
@@ -59,6 +59,7 @@ public class Globals : MonoBehaviour
         else
             playerScriptTutorial.enabled = false;
 
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
         AudioListener.pause = true;
@@ -73,6 +74,7 @@ public class Globals : MonoBehaviour
         else
             playerScriptTutorial.enabled = true;
 
+        Cursor.visible = true;
         Time.timeScale = 1;
         AudioListener.pause = false;
         Cursor.lockState = CursorLockMode.Locked;

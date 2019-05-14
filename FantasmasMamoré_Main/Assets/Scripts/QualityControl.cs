@@ -18,7 +18,10 @@ public class QualityControl : MonoBehaviour
     void Awake()
     {
         DropdownQuality.value = QualitySettings.GetQualityLevel();
-
+        DropdownResolution.onValueChanged.AddListener(delegate
+        {
+            DropDownValueChanged(DropdownResolution);
+        });
     }
 
     // Update is called once per frame
@@ -52,7 +55,18 @@ public class QualityControl : MonoBehaviour
        }
 
 
+        if (FullScreen.isOn == true)
+        {
+            Screen.fullScreen = true;
+        }
+        if (FullScreen.isOn == false)
+        {
+            Screen.fullScreen = false;
+        }
+    }
 
+    void DropDownValueChanged(Dropdown change)
+    {
         if (DropdownResolution.value == 0)
         {
             Resolution1024();
@@ -78,16 +92,6 @@ public class QualityControl : MonoBehaviour
         if (DropdownResolution.value == 5)
         {
             Resolution1920();
-        }
-
-
-        if (FullScreen.isOn == true)
-        {
-            Screen.fullScreen = true;
-        }
-        if (FullScreen.isOn == false)
-        {
-            Screen.fullScreen = false;
         }
     }
 

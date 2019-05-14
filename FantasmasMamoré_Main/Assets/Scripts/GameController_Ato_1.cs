@@ -20,6 +20,7 @@ public class GameController_Ato_1 : MonoBehaviour
     {
         AI_Enabled = false;
         dialogueIndex = 0;
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Locked;
     }
     
