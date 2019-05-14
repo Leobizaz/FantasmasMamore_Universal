@@ -21,7 +21,7 @@ public class MulherBehaviour : MonoBehaviour
     public void Corre1()
     {
         anim.Play("surprised");
-        Invoke("NextPlace1", 3.5f);
+        Invoke("NextPlace1", 3f);
 
     }
     void NextPlace1()

@@ -13,10 +13,11 @@ public class QualityControl : MonoBehaviour
     public Dropdown DropdownResolution;
     public Toggle FullScreen;
 
+    
 
-
-    void Start()
+    void Awake()
     {
+        DropdownQuality.value = QualitySettings.GetQualityLevel();
 
     }
 
