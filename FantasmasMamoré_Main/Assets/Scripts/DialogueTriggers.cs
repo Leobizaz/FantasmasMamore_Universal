@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogueTriggers : MonoBehaviour
 {
-
+    public bool autoDestroy = true;
     public AudioClip audioclip;
     public AudioSource playeraudio;
 
@@ -20,7 +20,8 @@ public class DialogueTriggers : MonoBehaviour
         {
             playeraudio.clip = audioclip;
             playeraudio.Play();
-            Destroy(gameObject);
+            if(autoDestroy)
+                Destroy(gameObject);
         }
     }
 }
