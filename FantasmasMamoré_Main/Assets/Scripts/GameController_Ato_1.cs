@@ -20,6 +20,7 @@ public class GameController_Ato_1 : MonoBehaviour
     {
         AI_Enabled = false;
         dialogueIndex = 0;
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Locked;
     }
     
@@ -68,6 +69,23 @@ public class GameController_Ato_1 : MonoBehaviour
         {
             V();
         }
+
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            Globals.playerProgress = 0;
+            SceneManager.LoadScene("LoadingScreenAto1");
+        }
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+            Globals.playerProgress = 1;
+            SceneManager.LoadScene("LoadingScreenAto1");
+        }
+        if (Input.GetKeyDown(KeyCode.F3))
+        {
+            Globals.playerProgress = 2;
+            SceneManager.LoadScene("LoadingScreenAto1");
+        }
+
     }
 
     public void AI_Enable()

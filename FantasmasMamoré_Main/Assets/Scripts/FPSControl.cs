@@ -75,7 +75,7 @@ public class FPSControl : MonoBehaviour {
         {
 
             UnlockMovement();
-            cutscene.WideScreenOutF();
+            cutscene.WideScreenInF();
             vilao.SetActive(true);
             killme.enemyBatch_1.SetActive(true);
             TeleportPlayer(9.54f, 51f, 14.4f, 0, -189f, 0);
@@ -85,13 +85,20 @@ public class FPSControl : MonoBehaviour {
         else if(Globals.playerProgress == 2)
         {
             UnlockMovement();
-            cutscene.WideScreenOutF();
+            cutscene.WideScreenInF();
             killme.Ato1.SetActive(false);
             TeleportPlayer(260, 55, 334, 0, -91, 0);
         }
+        else if (Globals.playerProgress == 3)
+        {
+            UnlockMovement();
+            cutscene.WideScreenInF();
+            killme.Ato1.SetActive(false);
+            TeleportPlayer(-124, 51, 54, 0, 85, 0);
+        }
 
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {

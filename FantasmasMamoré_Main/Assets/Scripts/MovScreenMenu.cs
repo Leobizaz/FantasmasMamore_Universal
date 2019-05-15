@@ -63,7 +63,7 @@ public class MovScreenMenu : MonoBehaviour
     }
     public void LoadAct1()
     {
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("LoadingScreenAto1");
         FPSControl.live = true;
     }
 }
