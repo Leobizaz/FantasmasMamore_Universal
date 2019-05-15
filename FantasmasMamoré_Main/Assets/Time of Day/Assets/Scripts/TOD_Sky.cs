@@ -103,10 +103,16 @@ public partial class TOD_Sky : MonoBehaviour
 			int   year  = Cycle.Year;
 			int   month = Cycle.Month;
 			int   day   = Cycle.Day;
-			float hour  = Cycle.Hour - World.UTC;
+            float hour = Cycle.Hour - World.UTC;
 
-			// Time scale
-			float d = 367 * year - 7 * (year + (month + 9) / 12) / 4 + 275 * month / 9 + day - 730530 + hour / 24f;
+            if (ControleTempoGalpao.BomDia == true)
+            {
+                hour = 13;
+            }
+
+
+            // Time scale
+            float d = 367 * year - 7 * (year + (month + 9) / 12) / 4 + 275 * month / 9 + day - 730530 + hour / 24f;
 			float d_noon = 367 * year - 7 * (year + (month + 9) / 12) / 4 + 275 * month / 9 + day - 730530 + 12f / 24f;
 
 			// Tilt of earth's axis of rotation
