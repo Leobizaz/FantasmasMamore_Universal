@@ -53,7 +53,7 @@ public class Evento_Galpao : MonoBehaviour
         if(other.gameObject.name == "OBJ_Tabua" && index < 5)
         {
             other.tag = "Untagged";
-            other.attachedRigidbody.isKinematic = false;
+            other.attachedRigidbody.isKinematic = true;
             other.attachedRigidbody.useGravity = false;
             other.transform.position = position[index];
             other.transform.rotation = rotation[index];
