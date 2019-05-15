@@ -9,7 +9,7 @@ public class TriggerPhase2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Interactable")
+        if (other.tag == "Pickupable Object" && other.name == "Tabua")
         {
             dialogo.SetActive(true);
             tutorial.Phase3();

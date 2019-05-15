@@ -36,9 +36,6 @@ public class TutorialController : MonoBehaviour
         sky = skydome.GetComponent<TOD_Sky>();
         fadeAnim = fade.GetComponent<Animator>();
         playercode = player.GetComponent<FPSControlTutorial>();
-        controller.enabled = false;
-        controller.transform.position = new Vector3(-117.77f, 1.49f, 163.41f);
-        controller.enabled = true;
         Invoke("PlayerStart", 0.5f);
         Invoke("Phase1", 2f);
     }
@@ -64,9 +61,9 @@ public class TutorialController : MonoBehaviour
     {
         controller.enabled = false;
         controller.transform.position = new Vector3(-103f, 1.08f, -8.5f); //Teleporta o jogador
-        player.transform.position = new Vector3(-103f, 1.08f, -8.5f);
+        //player.transform.position = new Vector3(-103f, 1.08f, -8.5f);
         controller.enabled = true;
-        //sky.Cycle.Hour = 11.18f; //Muda o tempo do dia
+        sky.Cycle.Hour = 11.18f; //Muda o tempo do dia
         phase1.SetActive(false);
         LoadPhase2(); //Carrega os assets da segunda phase
         fadeAnim.Play("FadeIn");
@@ -133,7 +130,8 @@ public class TutorialController : MonoBehaviour
 
     void UpdateObjetivo()
     {
-        objetivo.Play("objetivoatualizado_in");
+        //atualiza objetivo
+        //objetivo.Play("objetivoatualizado_in");
     }
 
     IEnumerator Phase3Dialogos()
@@ -147,9 +145,9 @@ public class TutorialController : MonoBehaviour
     void PlayerStart()
     {
         playercode.enabled = true;
-        controller.enabled = false;
-        controller.transform.position = new Vector3(-117.77f, 1.49f, 163.41f);
-        controller.enabled = true;
+        //controller.enabled = false;
+        //controller.transform.position = new Vector3(-117.77f, 1.49f, 163.41f);
+        //controller.enabled = true;
     }
 
     public void EndTutorial()
