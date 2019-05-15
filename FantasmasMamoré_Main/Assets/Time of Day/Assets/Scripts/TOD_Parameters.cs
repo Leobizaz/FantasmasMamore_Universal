@@ -5,7 +5,8 @@ using System;
 /// All parameters of the sky dome.
 [Serializable] public class TOD_Parameters
 {
-	public TOD_CycleParameters      Cycle;
+
+    public TOD_CycleParameters      Cycle;
 	public TOD_WorldParameters      World;
 	public TOD_AtmosphereParameters Atmosphere;
 	public TOD_DayParameters        Day;
