@@ -13,7 +13,7 @@ public class Evento_Galpao : MonoBehaviour
 
     // Posicoes das tabuas na barreira 1
     //(-131.939f, 51.94f, 43.45f)
-    //(-131.913f, -4.92f, -88.634f)
+    //(-131.913f, 51.02f, 43.35f)
     //(-131.878f, 50.72f, 43.357f)
     //(-131.818f, 51.22f, 43.376f)
     //(-131.863f, 52.389f, 43.542f)
@@ -50,15 +50,14 @@ public class Evento_Galpao : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "OBJ_Tabua" && index < 4)
+        if(other.gameObject.name == "OBJ_Tabua" && index < 5)
         {
             other.tag = "Untagged";
             other.attachedRigidbody.isKinematic = false;
             other.attachedRigidbody.useGravity = false;
             other.transform.position = position[index];
-            other.attachedRigidbody.constraints = RigidbodyConstraints.FreezePosition;
             other.transform.rotation = rotation[index];
-            other.attachedRigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+            other.attachedRigidbody.constraints = RigidbodyConstraints.FreezeAll;
             index++;
         }
 
