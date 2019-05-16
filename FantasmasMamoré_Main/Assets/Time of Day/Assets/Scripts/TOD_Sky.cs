@@ -109,10 +109,6 @@ public partial class TOD_Sky : MonoBehaviour
             {
                 hour = 13;
             }
-            else
-            {
-                hour = 0;
-            }
 
 
             // Time scale

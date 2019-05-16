@@ -5,6 +5,7 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     public GameObject eyes;
+    public GameObject hand;
     GameObject grabbedObject;
     float grabbedObjectSize;
     public GameObject handUI;
@@ -17,7 +18,7 @@ public class PickUp : MonoBehaviour
 
     GameObject GetMouseHoverObject(float range)
     {
-        Vector3 position = gameObject.transform.position;
+        Vector3 position = Camera.main.transform.position;
         RaycastHit raycastHit;
         Vector3 target = position + Camera.main.transform.forward * range;
 
@@ -93,12 +94,15 @@ public class PickUp : MonoBehaviour
              grabbedObject.transform.rotation = Quaternion.Euler(-26, grabbedObject.transform.rotation.y, -90);
              //grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
              */
-
+            //grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
             grabbedObject.transform.parent = eyes.transform;
             grabbedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
             grabbedObject.GetComponent<Rigidbody>().useGravity = false;
-            Vector3 newPosition = gameObject.transform.position + Camera.main.transform.forward * grabbedObjectSize;
+            Vector3 newPosition = hand.transform.position;
+            Quaternion newRotation = Quaternion.Euler(0, 90, 0);
+            //Camera.main.transform.forward* grabbedObjectSize;
             grabbedObject.transform.position = newPosition;
+            grabbedObject.transform.rotation = newRotation;
 
         }
     }

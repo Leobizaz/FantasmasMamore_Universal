@@ -7,7 +7,7 @@ using TMPro;
 
 public class LoadScreen : MonoBehaviour
 {
-    public int levelIndex;
+    public int levelIndex = 4;
     public TextMeshProUGUI progressText;
     public Slider slider;
 

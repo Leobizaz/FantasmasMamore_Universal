@@ -159,7 +159,7 @@ public class TutorialController : MonoBehaviour
 
     void NextScene()
     {
-        SceneManager.LoadScene("Ato 1");
+        SceneManager.LoadScene("LoadingScreenAto1");
     }
 
 }
