@@ -6,11 +6,48 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: lambert1
+    2100002: "TXT_Galp\xE3o"
+    2100004: TXT_2ndF
+    2100006: TXT_Telhado
+    2100008: TXT_Vigas
+    2100010: TXT_Escada
+    2100012: TXT_Pauzinhos
     2300000: //RootNode
     3300000: //RootNode
     4300000: "Galp\xE3o_Buildado"
+    4300002: "Galp\xE3o_Combined"
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TXT_2ndF
+    second: {fileID: 2100000, guid: 0a256eee8ae337b4c8de735c170728e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TXT_Escada
+    second: {fileID: 2100000, guid: 8b70a3258598bd8478423ff61df4ae53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "TXT_Galp\xE3o"
+    second: {fileID: 2100000, guid: 883b57bd14405d1419c673258cb73acf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TXT_Pauzinhos
+    second: {fileID: 2100000, guid: 5c0ce596468061547b64ef84fdaeb471, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TXT_Telhado
+    second: {fileID: 2100000, guid: 6bf9e69eff8992e4ea30ddd7fc002b7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TXT_Vigas
+    second: {fileID: 2100000, guid: c4d0ef1025ec4cb4a83d0d8325a00b96, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

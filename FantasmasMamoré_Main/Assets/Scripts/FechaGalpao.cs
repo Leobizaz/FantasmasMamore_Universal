@@ -25,7 +25,7 @@ public class FechaGalpao : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
-            porta.transform.localPosition = new Vector3(-123.93f, 53.245f, 47.62f);
+            porta.transform.rotation = Quaternion.Euler(0, 84.815f, 0);
             E.SetActive(true);
             Au.PlayOneShot(inpact, 0.4f);
             Destroy(this.gameObject);
