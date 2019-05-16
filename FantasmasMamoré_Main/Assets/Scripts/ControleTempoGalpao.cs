@@ -14,6 +14,7 @@ public class ControleTempoGalpao : MonoBehaviour
     public GameObject dialogotomaraquefuncione;
     public GameObject musica;
     public GameObject somposchase;
+    public GameObject telavitoria;
    // public bool bomDia = false;
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,7 @@ public class ControleTempoGalpao : MonoBehaviour
                 dialogoacabo.SetActive(true);
                 musica.SetActive(false);
                 somposchase.SetActive(true);
-
+                Invoke("Vitorial", 7f);
             }
         }
         print(Timeleft);
@@ -44,12 +45,19 @@ public class ControleTempoGalpao : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.tag == "Player")
+        if(col.gameObject.tag == "Pickupable Object")
         {
             SpawnInimigo.SetActive(true);
             Spawn = true;
             GameController_Ato_1.AI_Enabled = true;
             dialogotomaraquefuncione.SetActive(true);
         }
+    }
+
+    void Vitorial()
+    {
+        telavitoria.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

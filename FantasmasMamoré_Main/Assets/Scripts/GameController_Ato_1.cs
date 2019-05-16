@@ -85,6 +85,11 @@ public class GameController_Ato_1 : MonoBehaviour
             Globals.playerProgress = 2;
             SceneManager.LoadScene("LoadingScreenAto1");
         }
+        if (Input.GetKeyDown(KeyCode.F4))
+        {
+            Globals.playerProgress = 3;
+            SceneManager.LoadScene("LoadingScreenAto1");
+        }
 
     }
 
@@ -115,7 +120,7 @@ public class GameController_Ato_1 : MonoBehaviour
 
     public void LoadAct1()
     {
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene("LoadingScreenAto1");
         FPSControl.live = true;
     }
     public void LoadMenu()
