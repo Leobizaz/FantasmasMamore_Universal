@@ -11,6 +11,8 @@ public class FechaGalpao : MonoBehaviour
     public AudioSource audiomulher;
     public MulherBehaviour codigomulher;
     public GameObject E;
+    public GameObject dialogotabua;
+    public GameObject musica;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class FechaGalpao : MonoBehaviour
     {
         if(col.gameObject.tag == "Player" && !ativo)
         {
+            musica.SetActive(true);
             ativo = true;
             porta.transform.rotation = Quaternion.Euler(0, 84.815f, 0);
             //E.SetActive(true);
@@ -47,6 +50,7 @@ public class FechaGalpao : MonoBehaviour
     void Cu()
     {
         E.SetActive(true);
+        dialogotabua.SetActive(true);
         Destroy(this.gameObject);
     }
 
