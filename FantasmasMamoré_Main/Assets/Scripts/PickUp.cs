@@ -57,6 +57,7 @@ public class PickUp : MonoBehaviour
             grabbedObject.GetComponent<Rigidbody>().useGravity = true;
             //grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
             grabbedObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            grabbedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         }
         grabbedObject = null;
     }
@@ -72,6 +73,8 @@ public class PickUp : MonoBehaviour
                 DropObject();
         }
 
+        if (grabbedObject.tag != "Pickupable Object") DropObject();
+
         if(grabbedObject != null)
         {
             /*
@@ -82,6 +85,7 @@ public class PickUp : MonoBehaviour
              */
 
             grabbedObject.transform.parent = eyes.transform;
+            grabbedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
             grabbedObject.GetComponent<Rigidbody>().useGravity = false;
             Vector3 newPosition = gameObject.transform.position + Camera.main.transform.forward * grabbedObjectSize;
             grabbedObject.transform.position = newPosition;

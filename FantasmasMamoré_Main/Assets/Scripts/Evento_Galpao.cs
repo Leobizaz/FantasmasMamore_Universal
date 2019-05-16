@@ -52,11 +52,12 @@ public class Evento_Galpao : MonoBehaviour
     {
         if(other.gameObject.name == "OBJ_Tabua" && index < 5)
         {
+            other.transform.parent = this.transform;
+            other.transform.position = position[index];
+            other.transform.rotation = rotation[index];
             other.tag = "Untagged";
             other.attachedRigidbody.isKinematic = true;
             other.attachedRigidbody.useGravity = false;
-            other.transform.position = position[index];
-            other.transform.rotation = rotation[index];
             other.attachedRigidbody.constraints = RigidbodyConstraints.FreezeAll;
             index++;
         }
