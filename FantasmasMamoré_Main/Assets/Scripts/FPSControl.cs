@@ -5,6 +5,7 @@ using TMPro;
 
 public class FPSControl : MonoBehaviour {
     public GameObject vilao;
+    public GameObject vilaoanim;
     bool moveLock = true;
     public static bool live = true;
     public static bool victory = false;
@@ -77,6 +78,7 @@ public class FPSControl : MonoBehaviour {
             UnlockMovement();
             cutscene.WideScreenInF();
             vilao.SetActive(true);
+            vilaoanim.SetActive(true);
             killme.enemyBatch_1.SetActive(true);
             TeleportPlayer(9.54f, 51f, 14.4f, 0, -189f, 0);
             Invoke("Killme", 3f);
@@ -198,6 +200,7 @@ public class FPSControl : MonoBehaviour {
         {
             anim.SetInteger("State", 0);
             vilao.SetActive(true);
+            vilaoanim.SetActive(true);
             moveLock = true;
         }
     }

@@ -15,6 +15,8 @@ public class ControleTempoGalpao : MonoBehaviour
     public GameObject musica;
     public GameObject somposchase;
     public GameObject telavitoria;
+
+    public GameObject tobecontinued;
    // public bool bomDia = false;
     // Start is called before the first frame update
     void Start()
@@ -56,6 +58,7 @@ public class ControleTempoGalpao : MonoBehaviour
 
     void Vitorial()
     {
+        tobecontinued.SetActive(true);
         telavitoria.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

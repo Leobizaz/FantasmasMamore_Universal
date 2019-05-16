@@ -72,8 +72,8 @@ public class PickUp : MonoBehaviour
             else
                 DropObject();
         }
-
-        if (grabbedObject.tag != "Pickupable Object") DropObject();
+        if(grabbedObject != null)
+            if (grabbedObject.tag != "Pickupable Object") DropObject();
 
         if(grabbedObject != null)
         {

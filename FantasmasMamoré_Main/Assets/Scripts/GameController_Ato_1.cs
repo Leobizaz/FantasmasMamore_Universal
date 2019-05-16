@@ -131,6 +131,6 @@ public class GameController_Ato_1 : MonoBehaviour
 
     public void Exit()
     {
-        Application.Quit();
+        SceneManager.LoadScene("MenuScene");
     }
 }
