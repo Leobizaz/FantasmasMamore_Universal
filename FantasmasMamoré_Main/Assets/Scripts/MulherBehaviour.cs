@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class MulherBehaviour : MonoBehaviour
 {
+    public bool die;
     public Animator anim;
     private NavMeshAgent agent;
 
@@ -15,13 +16,17 @@ public class MulherBehaviour : MonoBehaviour
 
     void Update()
     {
-        
+        if (die)
+        {
+            transform.localScale = new Vector3(transform.localScale.x - 0.05f, transform.localScale.y - 0.05f, transform.localScale.z - 0.05f);
+            Invoke("Destroy", 1.5f);
+        }
     }
 
     public void Corre1()
     {
         anim.Play("surprised");
-        Invoke("NextPlace1", 3f);
+        Invoke("NextPlace1", 1f);
     }
     void NextPlace1()
     {
@@ -40,5 +45,17 @@ public class MulherBehaviour : MonoBehaviour
     public void Corre4()
     {
         agent.SetDestination(new Vector3(-124, 52, 41));
+        Invoke("GoIdle", 2f);
     }
+
+    public void GoIdle()
+    {
+        anim.Play("idle");
+    }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
+
 }

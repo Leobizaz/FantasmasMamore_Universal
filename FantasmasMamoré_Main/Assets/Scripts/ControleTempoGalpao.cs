@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ControleTempoGalpao : MonoBehaviour
 {
-    public float Timeleft = 10f;
+    public float Timeleft = 100f;
     public GameObject SpawnInimigo;
     public bool Spawn = false;
     public static bool BomDia = false; 
@@ -40,6 +40,7 @@ public class ControleTempoGalpao : MonoBehaviour
         {
             SpawnInimigo.SetActive(true);
             Spawn = true;
+            GameController_Ato_1.AI_Enabled = true;
 
         }
     }
