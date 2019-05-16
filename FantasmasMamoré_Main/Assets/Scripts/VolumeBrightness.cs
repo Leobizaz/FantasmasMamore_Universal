@@ -57,5 +57,8 @@ public class VolumeBrightness : MonoBehaviour
         Saved_volumeMusica = volumeMusica;
     }
 
-
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }

@@ -63,6 +63,7 @@ public class MovScreenMenu : MonoBehaviour
     }
     public void LoadAct1()
     {
+        ControleTempoGalpao.BomDia = false;
         SceneManager.LoadScene("LoadingScreenAto1");
         FPSControl.live = true;
     }

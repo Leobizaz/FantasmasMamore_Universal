@@ -7,6 +7,8 @@ public class PickUp : MonoBehaviour
     public GameObject eyes;
     GameObject grabbedObject;
     float grabbedObjectSize;
+    public GameObject handUI;
+    public LayerMask myLayerMask;
 
     void Start()
     {
@@ -19,7 +21,7 @@ public class PickUp : MonoBehaviour
         RaycastHit raycastHit;
         Vector3 target = position + Camera.main.transform.forward * range;
 
-        if(Physics.Linecast(position,target,out raycastHit))
+        if(Physics.Linecast(position,target,out raycastHit, myLayerMask))
         {
             return raycastHit.collider.gameObject;
         }
@@ -64,6 +66,14 @@ public class PickUp : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(GetMouseHoverObject(10) != null && GetMouseHoverObject(10).tag == "Pickupable Object")
+        {
+            handUI.SetActive(true);
+        }
+        else
+        {
+            handUI.SetActive(false);
+        }
 
         if (Input.GetButtonDown("Fire1"))
         {
