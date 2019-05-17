@@ -70,7 +70,7 @@ public class FPSControlTutorial : MonoBehaviour {
 
         //speedfactor = speedfactor + acceleration;
         //speed = speedfactor * 2f;
-        speed = 6f;
+        speed = 7f;
         //speedfactor = Mathf.Clamp(speedfactor, 1, 3);
         //if(speedfactor >= 2.4f)
         CameraRun.speed = Mathf.Round(3 * 5);
@@ -87,7 +87,7 @@ public class FPSControlTutorial : MonoBehaviour {
         //if (speedfactor == 1)
         //{
         //  StopCoroutine(lastCoroutine);
-        speed = 2.6f;
+        speed = 4f;
         //}
 
         yield return new WaitForSeconds(0.1f);

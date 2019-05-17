@@ -29,7 +29,7 @@ public class FPSControl : MonoBehaviour {
     public GameObject thomas;
     public GameController_Ato_1 killme;
 
-    public TextMeshProUGUI obj;
+    public TextMeshProUGUI Objetivo;
 
     CutsceneLookControl cutscene;
 
@@ -70,7 +70,7 @@ public class FPSControl : MonoBehaviour {
         {
             anim.Play("Cutscene Inicial");
             audio.Play();
-            obj.text = "Investigue a casa.";
+            Objetivo.text = "Investigue a casa.";
         }
         else if(Globals.playerProgress == 1)
         {
@@ -158,7 +158,7 @@ public class FPSControl : MonoBehaviour {
 
         //speedfactor = speedfactor + acceleration;
         //speed = speedfactor * 2f;
-        speed = 6f;
+        speed = 7f;
         //speedfactor = Mathf.Clamp(speedfactor, 1, 3);
         //if(speedfactor >= 2.4f)
         CameraRun.speed = Mathf.Round(3 * 5);
@@ -175,7 +175,7 @@ public class FPSControl : MonoBehaviour {
             //if (speedfactor == 1)
             //{
               //  StopCoroutine(lastCoroutine);
-                speed = 2.6f;
+                speed = 4f;
             //}
 
             yield return new WaitForSeconds(0.1f);
@@ -211,6 +211,7 @@ public class FPSControl : MonoBehaviour {
         {
             moveLock = true;
             anim.Play("Ledge");
+            Objetivo.text = "Explore a região.";
             killme.Ato1.SetActive(false);
             Globals.playerProgress = 2;
         }
@@ -244,7 +245,7 @@ public class FPSControl : MonoBehaviour {
     }
     public void End3()
     {
-        obj.text = "Escape pela mata até chegar na beira do rio.";
+        Objetivo.text = "Escape pela mata até chegar na beira do rio.";
         Dialogo3.SetActive(false);
         musica.SetActive(true);
         Globals.playerProgress = 1;
@@ -258,7 +259,7 @@ public class FPSControl : MonoBehaviour {
 
     public void Thomas()
     {
-        obj.text = "Vá até a porta e investigue lá fora.";
+        Objetivo.text = "Vá até a porta e investigue lá fora.";
         thomas.SetActive(true);
         Invoke("Naohaviatrem", 2f);
     }

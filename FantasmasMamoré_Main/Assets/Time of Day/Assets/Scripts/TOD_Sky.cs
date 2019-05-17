@@ -9,10 +9,27 @@ using UnityEngine;
 [RequireComponent(typeof(TOD_Components))]
 public partial class TOD_Sky : MonoBehaviour
 {
+    private float speedUp = 0;
 	private const float pi  = Mathf.PI;
 	private const float tau = Mathf.PI * 2.0f;
 
-	private void UpdateScattering()
+    void Update()
+    {
+        if (ControleTempoGalpao.BomDia == true)
+        {
+
+
+            if(speedUp == 13)
+            {
+                speedUp = 13;
+            }
+
+            if (speedUp != 13)
+                speedUp += 0.2f;
+        }
+    }
+
+    private void UpdateScattering()
 	{
 		// Phase function
 		float g  = -Atmosphere.Directionality;
@@ -107,7 +124,8 @@ public partial class TOD_Sky : MonoBehaviour
 
             if (ControleTempoGalpao.BomDia == true)
             {
-                hour = 13;
+                hour = speedUp;
+
             }
 
 

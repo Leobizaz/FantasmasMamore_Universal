@@ -11,18 +11,22 @@ public class LockMouse : MonoBehaviour
         if (FPSControl.live == true && FPSControl.victory == false)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
         if (FPSControl.victory == false && FPSControl.live == true)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
         if (FPSControl.live == false && FPSControl.victory == false)
         {
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
         if (FPSControl.victory == true && FPSControl.live == true)
         {
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }

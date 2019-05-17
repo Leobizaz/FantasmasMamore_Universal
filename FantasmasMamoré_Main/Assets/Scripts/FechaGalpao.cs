@@ -32,6 +32,7 @@ public class FechaGalpao : MonoBehaviour
             musica.SetActive(true);
             ativo = true;
             porta.transform.rotation = Quaternion.Euler(0, 84.815f, 0);
+            //FPSControl.Objetivo.text = "Utilize as tábuas de madeira para bloquear os fantasmas.";
             //E.SetActive(true);
             Au.PlayOneShot(inpact, 0.4f);
             Invoke("Cu", 6f);
