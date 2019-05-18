@@ -7,6 +7,7 @@ public class EnemyBehaviour : MonoBehaviour
 {
     Animator anim;
     Rigidbody rb;
+    bool barricada;
     public NavMeshAgent agent;
     public GameObject player;
 
@@ -31,7 +32,7 @@ public class EnemyBehaviour : MonoBehaviour
         agent.enabled = false;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         extraRotation();
         if (GameController_Ato_1.AI_Enabled)
@@ -56,6 +57,35 @@ public class EnemyBehaviour : MonoBehaviour
             anim.SetBool("isWalking", false);
         }
 
+        if (anim.GetBool("isBashing"))
+        {
+            agent.enabled = false;
+        }
+        else if(!anim.GetBool("isBashing") && GameController_Ato_1.AI_Enabled)
+        {
+            agent.enabled = true;
+        }
 
     }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if(collision.gameObject.tag == "Barricada")
+        {
+            barricada = true;
+            anim.SetBool("isBashing", true);
+        }
+        else
+        {
+            if(!IsInvoking("Test"))
+                Invoke("Test", 0.1f);
+        }
+    }
+
+    void Test()
+    {
+        barricada = false;
+        anim.SetBool("isBashing", false);
+    }
+
 }

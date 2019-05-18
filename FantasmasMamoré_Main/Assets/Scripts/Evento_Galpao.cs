@@ -11,6 +11,18 @@ public class Evento_Galpao : MonoBehaviour
 
     Quaternion[] rotation = new Quaternion[5];
 
+    [SerializeField] int health;
+    public int maxHealth = 3;
+    bool hitCooldown;
+
+    public BoxCollider collider;
+
+    public GameObject fx;
+    public GameObject fxHit;
+
+    [SerializeField]
+    GameObject[] StoredTabua = new GameObject[5];
+
     // Posicoes das tabuas na barreira 1
     //(-115.53, 52.03, 41.98)
     //(-115.53, 51.12, 41.98)
@@ -45,13 +57,21 @@ public class Evento_Galpao : MonoBehaviour
     }
     void Update()
     {
-        
+        if (index > 0)
+        {
+            collider.enabled = true;
+        }
+        else
+        {
+            collider.enabled = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.name == "OBJ_Tabua" && index < 5)
         {
+            StoredTabua[index] = other.gameObject;
             other.transform.parent = this.transform;
             other.transform.position = position[index];
             other.transform.rotation = rotation[index];
@@ -60,7 +80,55 @@ public class Evento_Galpao : MonoBehaviour
             other.attachedRigidbody.useGravity = false;
             other.attachedRigidbody.constraints = RigidbodyConstraints.FreezeAll;
             index++;
+            health = maxHealth;
         }
 
+        if(other.gameObject.tag == "Enemy" && index > 0)
+        {
+            hitCooldown = true;
+            Invoke("ResetCooldown", 2f);
+        }
+
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy" && index > 0)
+        {
+            if (!hitCooldown)
+            {
+                HitaMadeira(StoredTabua[index - 1]);
+            }
+
+            if (health == 0)
+            {
+                QuebraMadeira(StoredTabua[index - 1]);
+            }
+        }
+    }
+
+    void ResetCooldown()
+    {
+        hitCooldown = false;
+    }
+
+    void HitaMadeira(GameObject tabua)
+    {
+        //Instancia som e efeito
+        Instantiate(fxHit, tabua.transform.position, Quaternion.identity);
+        //
+        health--;
+        hitCooldown = true;
+        Invoke("ResetCooldown", 2f);
+    }
+
+    void QuebraMadeira(GameObject tabua)
+    {
+        //Instancia som e efeito
+        Instantiate(fx, tabua.transform.position, Quaternion.identity);
+        //
+        health = maxHealth;
+        Destroy(tabua);
+        index--;
     }
 }

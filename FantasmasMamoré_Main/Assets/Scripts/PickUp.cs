@@ -10,6 +10,7 @@ public class PickUp : MonoBehaviour
     float grabbedObjectSize;
     public GameObject handUI;
     public LayerMask myLayerMask;
+    public GameObject actualEyes;
 
     void Start()
     {
@@ -26,7 +27,13 @@ public class PickUp : MonoBehaviour
         {
             return raycastHit.collider.gameObject;
         }
+
         return null;
+    }
+
+    private void OnMouseEnter()
+    {
+        
     }
 
     void TryGrabObject(GameObject grabObject)
@@ -67,6 +74,9 @@ public class PickUp : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.green);
+
         if(GetMouseHoverObject(10) != null && GetMouseHoverObject(10).tag == "Pickupable Object")
         {
             handUI.SetActive(true);
@@ -83,6 +93,8 @@ public class PickUp : MonoBehaviour
             else
                 DropObject();
         }
+
+
         if(grabbedObject != null)
             if (grabbedObject.tag != "Pickupable Object") DropObject();
 
@@ -95,15 +107,17 @@ public class PickUp : MonoBehaviour
              //grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
              */
             //grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
+            Quaternion newRotation = Quaternion.Euler(0, 0, 0);
+            grabbedObject.transform.rotation = newRotation;
             grabbedObject.transform.parent = eyes.transform;
-            grabbedObject.transform.LookAt(this.gameObject.transform);
+            //grabbedObject.transform.LookAt(this.gameObject.transform);
             grabbedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
             grabbedObject.GetComponent<Rigidbody>().useGravity = false;
             Vector3 newPosition = hand.transform.position;
-            Quaternion newRotation = Quaternion.Euler(0, 0, 0);
+            //Quaternion newRotation = Quaternion.Euler(0, 0, 0);
             //Camera.main.transform.forward* grabbedObjectSize;
             grabbedObject.transform.position = newPosition;
-            grabbedObject.transform.rotation = newRotation;
+            //grabbedObject.transform.rotation = newRotation;
 
         }
     }

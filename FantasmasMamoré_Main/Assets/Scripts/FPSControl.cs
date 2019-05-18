@@ -103,7 +103,7 @@ public class FPSControl : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
         if (moveLock) CameraRun.speed = 0f;
 
