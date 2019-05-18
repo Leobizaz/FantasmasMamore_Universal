@@ -96,10 +96,11 @@ public class PickUp : MonoBehaviour
              */
             //grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
             grabbedObject.transform.parent = eyes.transform;
+            grabbedObject.transform.LookAt(this.gameObject.transform);
             grabbedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
             grabbedObject.GetComponent<Rigidbody>().useGravity = false;
             Vector3 newPosition = hand.transform.position;
-            Quaternion newRotation = Quaternion.Euler(0, 90, 0);
+            Quaternion newRotation = Quaternion.Euler(0, 0, 0);
             //Camera.main.transform.forward* grabbedObjectSize;
             grabbedObject.transform.position = newPosition;
             grabbedObject.transform.rotation = newRotation;
