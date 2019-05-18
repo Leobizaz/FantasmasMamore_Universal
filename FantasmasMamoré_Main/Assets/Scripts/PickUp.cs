@@ -63,16 +63,23 @@ public class PickUp : MonoBehaviour
 
         if (grabbedObject.GetComponent<Rigidbody>() != null)
         {
+            Vector3 temp = grabbedObject.transform.position;
+            Quaternion temp2 = grabbedObject.transform.rotation;
+            grabbedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             grabbedObject.transform.parent = null;
+
+            //grabbedObject.transform.position = temp;
+            //grabbedObject.transform.rotation = temp2;
+
             grabbedObject.GetComponent<Rigidbody>().useGravity = true;
             //grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
             grabbedObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            grabbedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+         
         }
         grabbedObject = null;
     }
 
-    void FixedUpdate()
+    void LateUpdate()
     {
 
         Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.green);
@@ -107,11 +114,18 @@ public class PickUp : MonoBehaviour
              //grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
              */
             //grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
-            Quaternion newRotation = Quaternion.Euler(0, 0, 0);
-            grabbedObject.transform.rotation = newRotation;
-            grabbedObject.transform.parent = eyes.transform;
-            //grabbedObject.transform.LookAt(this.gameObject.transform);
+            Quaternion newRotation = Quaternion.Euler(0, -eyes.transform.rotation.y, 0);
+            //grabbedObject.transform.rotation = newRotation;
+
+            
+            grabbedObject.transform.parent = hand.transform;
+
             grabbedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+            //grabbedObject.transform.LookAt(this.gameObject.transform);
+            
+
+            grabbedObject.transform.right = (grabbedObject.transform.position - transform.position);
+
             grabbedObject.GetComponent<Rigidbody>().useGravity = false;
             Vector3 newPosition = hand.transform.position;
             //Quaternion newRotation = Quaternion.Euler(0, 0, 0);
