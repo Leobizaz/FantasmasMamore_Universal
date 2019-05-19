@@ -122,11 +122,11 @@ public partial class TOD_Sky : MonoBehaviour
 			int   day   = Cycle.Day;
             float hour = Cycle.Hour - World.UTC;
 
-            if (ControleTempoGalpao.BomDia == true)
-            {
-                hour = speedUp;
-
-            }
+            //if (ControleTempoGalpao.BomDia == true)
+            //{
+            //    hour = speedUp;
+            //
+            //}
 
 
             // Time scale

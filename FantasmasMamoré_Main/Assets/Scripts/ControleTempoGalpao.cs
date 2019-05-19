@@ -16,6 +16,9 @@ public class ControleTempoGalpao : MonoBehaviour
     public GameObject somposchase;
     public GameObject telavitoria;
 
+    public TOD_Sky sky;
+    public TOD_Time skytime;
+
     public GameObject tobecontinued;
    // public bool bomDia = false;
     // Start is called before the first frame update
@@ -29,13 +32,15 @@ public class ControleTempoGalpao : MonoBehaviour
     {
         if (Spawn == true)
         {
-            Timeleft -= Time.deltaTime;
-            
-            if(Timeleft <= 0)
+            //Timeleft -= Time.deltaTime;
+
+            skytime.ProgressTime = true;
+
+            if(sky.Cycle.Hour >= 7)
             {
                 Timeleft = 0;
+                skytime.ProgressTime = false;
                 SpawnInimigo.SetActive(false);
-                BomDia = true;
                 dialogoacabo.SetActive(true);
                 musica.SetActive(false);
                 somposchase.SetActive(true);
