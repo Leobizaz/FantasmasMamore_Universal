@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 
 
 public class ControleTempoGalpao : MonoBehaviour
@@ -15,6 +15,12 @@ public class ControleTempoGalpao : MonoBehaviour
     public GameObject musica;
     public GameObject somposchase;
     public GameObject telavitoria;
+
+    public GameObject[] fantasmas;
+    public GameObject deathFX;
+    bool ded;
+
+
 
     public TOD_Sky sky;
     public TOD_Time skytime;
@@ -36,11 +42,16 @@ public class ControleTempoGalpao : MonoBehaviour
 
             skytime.ProgressTime = true;
 
+
+
+
+
             if(sky.Cycle.Hour >= 7)
             {
                 Timeleft = 0;
                 skytime.ProgressTime = false;
-                SpawnInimigo.SetActive(false);
+                if(!ded)
+                    DespawnFantasmas();
                 dialogoacabo.SetActive(true);
                 musica.SetActive(false);
                 somposchase.SetActive(true);
@@ -59,6 +70,18 @@ public class ControleTempoGalpao : MonoBehaviour
             GameController_Ato_1.AI_Enabled = true;
             dialogotomaraquefuncione.SetActive(true);
         }
+    }
+
+    void DespawnFantasmas()
+    {
+        ded = true;
+
+        foreach(GameObject fantasma in fantasmas)
+        {
+            Instantiate(deathFX, fantasma.transform.position, Quaternion.identity);
+        }
+
+        SpawnInimigo.SetActive(false);
     }
 
     void Vitorial()
