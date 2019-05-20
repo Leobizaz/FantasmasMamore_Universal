@@ -13,7 +13,7 @@ public class SetDefaultValues : MonoBehaviour
         VolumeBrightness.Saved_volumeMusica = 0.5f;
         VolumeBrightness.Saved_volumeVozes = 0.5f;
         VolumeBrightness.Saved_volumeEfeitos = 0.2f;
-        QualitySettings.SetQualityLevel(2);
+        QualitySettings.SetQualityLevel(3);
         Invoke("LoadIntro", 5f);
         Invoke("LoadGame", 12f);
     }
