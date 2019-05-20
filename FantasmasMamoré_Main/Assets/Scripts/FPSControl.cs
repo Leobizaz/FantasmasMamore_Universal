@@ -74,7 +74,7 @@ public class FPSControl : MonoBehaviour {
         }
         else if(Globals.playerProgress == 1)
         {
-
+            Objetivo.text = "Fuja dos fantasmas";
             UnlockMovement();
             cutscene.WideScreenInF();
             vilao.SetActive(true);
@@ -86,6 +86,7 @@ public class FPSControl : MonoBehaviour {
         }
         else if(Globals.playerProgress == 2)
         {
+            Objetivo.text = "Encontre um caminho alternativo para voltar à vila";
             UnlockMovement();
             cutscene.WideScreenInF();
             killme.Ato1.SetActive(false);
@@ -93,6 +94,7 @@ public class FPSControl : MonoBehaviour {
         }
         else if (Globals.playerProgress == 3)
         {
+            Objetivo.text = "Fale com a mulher que parece estar perdida";
             UnlockMovement();
             cutscene.WideScreenInF();
             killme.Ato1.SetActive(false);
@@ -211,7 +213,7 @@ public class FPSControl : MonoBehaviour {
         {
             moveLock = true;
             anim.Play("Ledge");
-            Objetivo.text = "Explore a região.";
+            Objetivo.text = "Encontre um caminho alternativo para voltar à vila";
             killme.Ato1.SetActive(false);
             Globals.playerProgress = 2;
         }

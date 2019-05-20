@@ -19,6 +19,7 @@ public class ControleTempoGalpao : MonoBehaviour
     public GameObject[] fantasmas;
     public GameObject deathFX;
     bool ded;
+    bool coiso;
 
 
 
@@ -61,14 +62,21 @@ public class ControleTempoGalpao : MonoBehaviour
         print(Timeleft);
     }
 
+    public void StartEvent()
+    {
+        SpawnInimigo.SetActive(true);
+        Spawn = true;
+        GameController_Ato_1.AI_Enabled = true;
+        //dialogotomaraquefuncione.SetActive(true);
+    }
+
     void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.tag == "Pickupable Object")
+        if(col.gameObject.tag == "Pickupable Object" && !coiso)
         {
-            SpawnInimigo.SetActive(true);
-            Spawn = true;
-            GameController_Ato_1.AI_Enabled = true;
             dialogotomaraquefuncione.SetActive(true);
+            coiso = true;
+
         }
     }
 

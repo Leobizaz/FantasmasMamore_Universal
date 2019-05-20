@@ -13,6 +13,9 @@ public class FechaGalpao : MonoBehaviour
     public GameObject E;
     public GameObject dialogotabua;
     public GameObject musica;
+
+    public ControleTempoGalpao xisde;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +42,7 @@ public class FechaGalpao : MonoBehaviour
             //Destroy(this.gameObject);
             Invoke("AudioMulher", 1f);
             Invoke("KillMulher", 3f);
+            Invoke("Xisde", 3f);
             Globals.playerProgress = 3;
         }
     }
@@ -53,6 +57,11 @@ public class FechaGalpao : MonoBehaviour
         E.SetActive(true);
         dialogotabua.SetActive(true);
         Destroy(this.gameObject);
+    }
+
+    void Xisde()
+    {
+        xisde.StartEvent();
     }
 
     void KillMulher()
