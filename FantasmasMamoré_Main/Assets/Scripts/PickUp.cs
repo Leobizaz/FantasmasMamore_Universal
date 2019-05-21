@@ -12,6 +12,8 @@ public class PickUp : MonoBehaviour
     public LayerMask myLayerMask;
     public GameObject actualEyes;
 
+    [SerializeField] GameObject grabbedRoot;
+
     void Start()
     {
         

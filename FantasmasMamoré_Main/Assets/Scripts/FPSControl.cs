@@ -17,6 +17,8 @@ public class FPSControl : MonoBehaviour {
     public GameObject obj2;
     public GameObject obj3;
     public GameObject musica;
+    public GameObject trem;
+    public TOD_Sky sky;
 
 
     private PlayerState playerState;
@@ -99,6 +101,16 @@ public class FPSControl : MonoBehaviour {
             cutscene.WideScreenInF();
             killme.Ato1.SetActive(false);
             TeleportPlayer(-124, 51, 54, 0, 85, 0);
+        }
+        else if(Globals.playerProgress == 4)
+        {
+            Objetivo.text = "Procure pelo seu corpo na cabana onde acordou";
+            UnlockMovement();
+            cutscene.WideScreenInF();
+            trem.SetActive(false);
+            sky.Cycle.Hour = 7f;
+            TeleportPlayer(-121, 51, 28, 0, 82, 0);
+
         }
 
 

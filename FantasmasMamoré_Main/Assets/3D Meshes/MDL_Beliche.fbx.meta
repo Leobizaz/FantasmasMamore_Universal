@@ -1,15 +1,20 @@
 fileFormatVersion: 2
-guid: d48f6a34708996348b7832d7307a27b5
+guid: 681fc59a7065a194ea1f964ee9adb5c1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: lambert1
+    2100000: TXT_Cama
     2300000: //RootNode
     3300000: //RootNode
     4300000: pCube1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TXT_Cama
+    second: {fileID: 2100000, guid: bd22b1cdc94b90142a96007179d1a9f9, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -40,7 +45,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 57
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1

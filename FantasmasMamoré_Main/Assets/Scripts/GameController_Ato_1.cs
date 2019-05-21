@@ -90,6 +90,11 @@ public class GameController_Ato_1 : MonoBehaviour
             Globals.playerProgress = 3;
             SceneManager.LoadScene("LoadingScreenAto1");
         }
+        if (Input.GetKeyDown(KeyCode.F5))
+        {
+            Globals.playerProgress = 4;
+            SceneManager.LoadScene("LoadingScreenAto1");
+        }
 
     }
 

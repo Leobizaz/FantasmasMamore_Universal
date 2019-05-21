@@ -169,7 +169,7 @@ Material:
     - _BurntAlbedoColor: {r: 0, g: 0, b: 0, a: 0}
     - _BurntEmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 0.20483543, g: 1.3041189, b: 1.2290126, a: 1}
+    - _Color: {r: 0.16637807, g: 1.0592737, b: 1.0038143, a: 1}
     - _ColorAddSubDiff: {r: 1, g: 0, b: 0, a: 0}
     - _Direction: {r: 0, g: 1, b: 0, a: 0}
     - _DissolveColor: {r: 0, g: 0.9339623, b: 0.9065293, a: 0}
