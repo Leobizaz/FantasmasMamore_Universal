@@ -46,15 +46,15 @@ public class ControleTempoGalpao : MonoBehaviour
             //Timeleft -= Time.deltaTime;
 
             skytime.ProgressTime = true;
+            skytime.DayLengthInMinutes = 7.5f;
 
 
 
 
-
-            if(sky.Cycle.Hour >= 7)
+            if (sky.Cycle.Hour >= 7)
             {
                 Timeleft = 0;
-                skytime.ProgressTime = false;
+                skytime.DayLengthInMinutes = 30;
                 if(!ded)
                     DespawnFantasmas();
                 dialogoacabo.SetActive(true);
@@ -64,6 +64,11 @@ public class ControleTempoGalpao : MonoBehaviour
                 gameController.Ato1.SetActive(true);
                 gameController.trem.SetActive(false);
             }
+            if(sky.Cycle.Hour >= 12)
+            {
+                skytime.ProgressTime = false;
+            }
+
         }
         print(Timeleft);
     }
