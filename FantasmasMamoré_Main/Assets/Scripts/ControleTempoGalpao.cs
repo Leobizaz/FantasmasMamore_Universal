@@ -112,6 +112,7 @@ public class ControleTempoGalpao : MonoBehaviour
         if (!abriu)
         {
             abriu = true;
+            Globals.playerProgress = 4;
             portasAbre.Play("open");
         }
     }

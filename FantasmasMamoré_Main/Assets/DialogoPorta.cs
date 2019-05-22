@@ -22,6 +22,7 @@ public class DialogoPorta : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && !interacted)
         {
+            interacted = true;
             gameObject.tag = "Untagged";
             knock.Play();
             Invoke("PlayAudio", delay);

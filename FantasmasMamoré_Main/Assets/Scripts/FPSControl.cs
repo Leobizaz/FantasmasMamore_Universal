@@ -18,6 +18,7 @@ public class FPSControl : MonoBehaviour {
     public GameObject obj3;
     public GameObject musica;
     public GameObject trem;
+    public GameObject enemies;
     public TOD_Sky sky;
 
 
@@ -92,6 +93,7 @@ public class FPSControl : MonoBehaviour {
             UnlockMovement();
             cutscene.WideScreenInF();
             killme.Ato1.SetActive(false);
+            enemies.SetActive(false);
             TeleportPlayer(260, 55, 334, 0, -91, 0);
         }
         else if (Globals.playerProgress == 3)
@@ -100,6 +102,7 @@ public class FPSControl : MonoBehaviour {
             UnlockMovement();
             cutscene.WideScreenInF();
             killme.Ato1.SetActive(false);
+            enemies.SetActive(false);
             TeleportPlayer(-124, 51, 54, 0, 85, 0);
         }
         else if(Globals.playerProgress == 4)
@@ -108,7 +111,8 @@ public class FPSControl : MonoBehaviour {
             UnlockMovement();
             cutscene.WideScreenInF();
             trem.SetActive(false);
-            sky.Cycle.Hour = 7f;
+            enemies.SetActive(false);
+            sky.Cycle.Hour = 12f;
             TeleportPlayer(-121, 51, 28, 0, 82, 0);
 
         }
@@ -227,6 +231,7 @@ public class FPSControl : MonoBehaviour {
             anim.Play("Ledge");
             Objetivo.text = "Encontre um caminho alternativo para voltar à vila";
             killme.Ato1.SetActive(false);
+            enemies.SetActive(false);
             Globals.playerProgress = 2;
         }
         if (col.gameObject.tag == "Cut" && !beliche)
