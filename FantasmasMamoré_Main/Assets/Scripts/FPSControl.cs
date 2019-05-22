@@ -57,6 +57,8 @@ public class FPSControl : MonoBehaviour {
 
     public static bool beliche;
 
+
+
     // Use this for initialization
     void Start ()
     {
@@ -119,9 +121,12 @@ public class FPSControl : MonoBehaviour {
 
 
     }
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+    void Update()
+    {
+        sensitivity = VolumeBrightness.Saved_sensibilidade;
+    }
+    // Update is called once per frame
+    void FixedUpdate () {
 
         if (moveLock) CameraRun.speed = 0f;
 
@@ -144,18 +149,24 @@ public class FPSControl : MonoBehaviour {
             eyes.transform.localRotation = Quaternion.Euler(0, 0, -camY);
 
 
+            Vector3 horizontalVelocity = new Vector3(player.velocity.x, 0, player.velocity.z);
 
-            if (Input.GetKey(KeyCode.LeftShift))
+            float horizontalSpeed = horizontalVelocity.magnitude;
+
+
+            if (Input.GetKey(KeyCode.LeftShift) && horizontalSpeed > 1)
             {
                 Run();
                 //StopCoroutine(lastCoroutine);
             }
-            if (Input.GetKeyUp(KeyCode.LeftShift))
+            if (Input.GetKeyUp(KeyCode.LeftShift) || horizontalSpeed < 1)
             {
+
                 CameraRun.speed = 0f;
                 lastCoroutine = StartCoroutine("Stoprun");
             }
-            if(Door.Cut == true)
+
+            if (Door.Cut == true)
             {
                 moveLock = true;
                 anim.SetInteger("State", 2);
@@ -228,6 +239,7 @@ public class FPSControl : MonoBehaviour {
         if(col.gameObject.tag == "Ledge")
         {
             moveLock = true;
+            TeleportPlayer(261.08f, 66.57f, 321.93f, 0, -91.84f, 0);
             anim.Play("Ledge");
             Objetivo.text = "Encontre um caminho alternativo para voltar à vila";
             killme.Ato1.SetActive(false);

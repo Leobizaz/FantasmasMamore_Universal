@@ -14,14 +14,17 @@ public class VolumeBrightness : MonoBehaviour
     public float volumeEfeitos;
     public float volumeVozes;
     public float volumeMusica;
+    public float sensibilidade;
 
     public Slider sliderEfeitos;
     public Slider sliderVozes;
     public Slider sliderMusica;
+    public Slider sliderSensibilidade;
 
     public static float Saved_volumeEfeitos;
     public static float Saved_volumeVozes;
     public static float Saved_volumeMusica;
+    public static float Saved_sensibilidade = 5f;
 
     private void Awake()
     {
@@ -36,7 +39,7 @@ public class VolumeBrightness : MonoBehaviour
         volumeEfeitos = sliderEfeitos.value;
         volumeVozes = sliderVozes.value;
         volumeMusica = sliderMusica.value;
-
+        sensibilidade = sliderSensibilidade.value;
 
         SetSavedOptions();
     }
@@ -47,6 +50,7 @@ public class VolumeBrightness : MonoBehaviour
         sliderEfeitos.value = Saved_volumeEfeitos;
         sliderVozes.value = Saved_volumeVozes;
         sliderMusica.value = Saved_volumeMusica;
+        sliderSensibilidade.value = Saved_sensibilidade;
     }
 
     void SetSavedOptions()
@@ -55,6 +59,7 @@ public class VolumeBrightness : MonoBehaviour
         Saved_volumeEfeitos = volumeEfeitos;
         Saved_volumeVozes = volumeVozes;
         Saved_volumeMusica = volumeMusica;
+        Saved_sensibilidade = sensibilidade;
     }
 
     public void Exit()

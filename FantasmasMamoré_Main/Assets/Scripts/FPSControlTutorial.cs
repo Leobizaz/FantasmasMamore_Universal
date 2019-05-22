@@ -31,10 +31,15 @@ public class FPSControlTutorial : MonoBehaviour {
         speedfactor = 1;
         lastCoroutine = null;
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+
+
+
+    // Update is called once per frame
+    void Update()
     {
+        sensitivity = VolumeBrightness.Saved_sensibilidade;
+
         ForwardBack = Input.GetAxis("Vertical") * speed;
         LeftRight = Input.GetAxis("Horizontal") * speed;
         Vector3 move = new Vector3(ForwardBack, 0, -LeftRight);
@@ -51,18 +56,24 @@ public class FPSControlTutorial : MonoBehaviour {
         // eyes.transform.Rotate(0, 0, camY); // esse não travava a rotação Y
         eyes.transform.localRotation = Quaternion.Euler(0, 0, -camY);
 
+        Vector3 horizontalVelocity = new Vector3(player.velocity.x, 0, player.velocity.z);
 
-        if (Input.GetKey(KeyCode.LeftShift))
-            {
-                Run();
-                //StopCoroutine(lastCoroutine);
-            }
-            if (Input.GetKeyUp(KeyCode.LeftShift))
-            {
-                CameraRun.speed = 0f;
-                lastCoroutine = StartCoroutine("Stoprun");
-            }
+        float horizontalSpeed = horizontalVelocity.magnitude;
+
+
+        if (Input.GetKey(KeyCode.LeftShift) && horizontalSpeed > 1)
+        {
+            Run();
+            //StopCoroutine(lastCoroutine);
         }
+        if (Input.GetKeyUp(KeyCode.LeftShift) || horizontalSpeed < 1)
+        {
+
+            CameraRun.speed = 0f;
+            lastCoroutine = StartCoroutine("Stoprun");
+        }
+
+    }
 
     public void Run()
     {
