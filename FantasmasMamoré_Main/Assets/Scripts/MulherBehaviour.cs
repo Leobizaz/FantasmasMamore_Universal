@@ -8,10 +8,12 @@ public class MulherBehaviour : MonoBehaviour
     public bool die;
     public Animator anim;
     private NavMeshAgent agent;
+    private AudioSource audio;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -30,6 +32,7 @@ public class MulherBehaviour : MonoBehaviour
     }
     void NextPlace1()
     {
+        audio.Play();
         agent.SetDestination(new Vector3(-111, 50, 316));
     }
 

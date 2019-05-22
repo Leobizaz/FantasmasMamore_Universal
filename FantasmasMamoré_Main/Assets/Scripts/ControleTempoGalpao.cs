@@ -21,6 +21,10 @@ public class ControleTempoGalpao : MonoBehaviour
 
     public GameObject[] fantasmas;
     public GameObject deathFX;
+
+    public GameObject dialogos;
+    private DialogosGalpao dialogosScript;
+
     bool ded;
     bool coiso;
     bool abriu;
@@ -35,7 +39,7 @@ public class ControleTempoGalpao : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        dialogosScript = dialogos.GetComponent<DialogosGalpao>();
     }
 
     // Update is called once per frame
@@ -44,7 +48,6 @@ public class ControleTempoGalpao : MonoBehaviour
         if (Spawn == true)
         {
             //Timeleft -= Time.deltaTime;
-
             skytime.ProgressTime = true;
             skytime.DayLengthInMinutes = 7.5f;
 
@@ -75,10 +78,16 @@ public class ControleTempoGalpao : MonoBehaviour
 
     public void StartEvent()
     {
+        Invoke("EnableDialogos", 3f);
         SpawnInimigo.SetActive(true);
         Spawn = true;
         GameController_Ato_1.AI_Enabled = true;
         //dialogotomaraquefuncione.SetActive(true);
+    }
+
+    public void EnableDialogos()
+    {
+        dialogos.SetActive(true);
     }
 
     void OnTriggerEnter(Collider col)
