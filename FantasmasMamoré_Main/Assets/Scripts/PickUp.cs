@@ -45,7 +45,7 @@ public class PickUp : MonoBehaviour
             return;
 
         grabbedObject = grabObject;
-        grabbedObjectSize = grabObject.GetComponent<Renderer>().bounds.size.magnitude;
+        //grabbedObjectSize = grabObject.GetComponent<Renderer>().bounds.size.magnitude;
     }
 
     bool CanGrab(GameObject candidate)
@@ -86,7 +86,7 @@ public class PickUp : MonoBehaviour
 
         Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.green);
 
-        if(GetMouseHoverObject(10) != null && GetMouseHoverObject(10).tag == "Pickupable Object")
+        if(GetMouseHoverObject(10) != null && (GetMouseHoverObject(10).tag == "Pickupable Object" || GetMouseHoverObject(10).tag == "Interactable"))
         {
             handUI.SetActive(true);
         }

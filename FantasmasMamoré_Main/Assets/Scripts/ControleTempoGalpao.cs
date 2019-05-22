@@ -15,11 +15,15 @@ public class ControleTempoGalpao : MonoBehaviour
     public GameObject musica;
     public GameObject somposchase;
     public GameObject telavitoria;
+    public Animator portasAbre;
+
+    public GameController_Ato_1 gameController;
 
     public GameObject[] fantasmas;
     public GameObject deathFX;
     bool ded;
     bool coiso;
+    bool abriu;
 
 
 
@@ -57,6 +61,8 @@ public class ControleTempoGalpao : MonoBehaviour
                 musica.SetActive(false);
                 somposchase.SetActive(true);
                 Invoke("Vitorial", 7f);
+                gameController.Ato1.SetActive(true);
+                gameController.trem.SetActive(false);
             }
         }
         print(Timeleft);
@@ -94,9 +100,14 @@ public class ControleTempoGalpao : MonoBehaviour
 
     void Vitorial()
     {
-        tobecontinued.SetActive(true);
-        telavitoria.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        //tobecontinued.SetActive(true);
+        //telavitoria.SetActive(true);
+        //Cursor.lockState = CursorLockMode.None;
+        //Cursor.visible = true;
+        if (!abriu)
+        {
+            abriu = true;
+            portasAbre.Play("open");
+        }
     }
 }

@@ -14,6 +14,8 @@ public class GameController_Ato_1 : MonoBehaviour
     public GameObject Ato1;
     public GameObject Ato2;
 
+    public GameObject trem;
+
     public string level;
 
     private void Awake()
