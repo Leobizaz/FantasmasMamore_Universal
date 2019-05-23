@@ -22,6 +22,7 @@ public class FPSControl : MonoBehaviour {
     public TOD_Sky sky;
     public GameObject lampada;
 
+    public ControleTempoGalpao controleTempo;
 
     private PlayerState playerState;
 
@@ -32,8 +33,6 @@ public class FPSControl : MonoBehaviour {
     public AudioClip voz3;
     public GameObject thomas;
     public GameController_Ato_1 killme;
-
-    public TextMeshProUGUI Objetivo;
 
     CutsceneLookControl cutscene;
 
@@ -51,6 +50,7 @@ public class FPSControl : MonoBehaviour {
     public float sensitivity;
     float camX;
     float camY;
+    public bool noMove;
 
     public float gravity = 100.0f;
 
@@ -76,11 +76,11 @@ public class FPSControl : MonoBehaviour {
         {
             anim.Play("Cutscene Inicial");
             audio.Play();
-            Objetivo.text = "Investigue a casa.";
+            ObjetivoGlobal.Objetivo = "Investigue a casa.";
         }
         else if(Globals.playerProgress == 1)
         {
-            Objetivo.text = "Fuja dos fantasmas";
+            ObjetivoGlobal.Objetivo = "Fuja dos fantasmas";
             UnlockMovement();
             cutscene.WideScreenInF();
             vilao.SetActive(true);
@@ -92,7 +92,7 @@ public class FPSControl : MonoBehaviour {
         }
         else if(Globals.playerProgress == 2)
         {
-            Objetivo.text = "Encontre um caminho alternativo para voltar à vila";
+            ObjetivoGlobal.Objetivo = "Encontre um caminho alternativo para voltar à vila";
             UnlockMovement();
             cutscene.WideScreenInF();
             killme.Ato1.SetActive(false);
@@ -101,7 +101,7 @@ public class FPSControl : MonoBehaviour {
         }
         else if (Globals.playerProgress == 3)
         {
-            Objetivo.text = "Fale com a mulher que parece estar perdida";
+            ObjetivoGlobal.Objetivo = "Fale com a mulher que parece estar perdida";
             UnlockMovement();
             cutscene.WideScreenInF();
             killme.Ato1.SetActive(false);
@@ -110,10 +110,13 @@ public class FPSControl : MonoBehaviour {
         }
         else if(Globals.playerProgress == 4)
         {
-            Objetivo.text = "Procure pelo seu corpo na cabana onde acordou";
+            ObjetivoGlobal.Objetivo = "Procure pelo seu corpo na cabana onde acordou";
             UnlockMovement();
             cutscene.WideScreenInF();
             trem.SetActive(false);
+            controleTempo.TriggerCamaAto1.SetActive(false);
+            controleTempo.PortaAto1.SetActive(false);
+            controleTempo.TriggersAto3.SetActive(true);
             enemies.SetActive(false);
             sky.Cycle.Hour = 12f;
             TeleportPlayer(-121, 51, 28, 0, 82, 0);
@@ -146,8 +149,8 @@ public class FPSControl : MonoBehaviour {
             camY -= Input.GetAxis("Mouse Y") * sensitivity;
 
             camY = Mathf.Clamp(camY, -90f, 90f);
-
-            player.Move(move * Time.deltaTime);
+            if(!noMove)
+                player.Move(move * Time.deltaTime);
             transform.Rotate(0, camX, 0);
             // eyes.transform.Rotate(0, 0, camY); // esse não travava a rotação Y
             eyes.transform.localRotation = Quaternion.Euler(0, 0, -camY);
@@ -245,7 +248,7 @@ public class FPSControl : MonoBehaviour {
             moveLock = true;
             TeleportPlayer(261.08f, 66.57f, 321.93f, 0, -91.84f, 0);
             anim.Play("Ledge");
-            Objetivo.text = "Encontre um caminho alternativo para voltar à vila";
+            ObjetivoGlobal.Objetivo = "Encontre um caminho alternativo para voltar à vila";
             killme.Ato1.SetActive(false);
             enemies.SetActive(false);
             Globals.playerProgress = 2;
@@ -280,7 +283,7 @@ public class FPSControl : MonoBehaviour {
     }
     public void End3()
     {
-        Objetivo.text = "Escape pela mata até chegar na beira do rio.";
+        ObjetivoGlobal.Objetivo = "Escape pela mata até chegar na beira do rio.";
         Dialogo3.SetActive(false);
         musica.SetActive(true);
         Globals.playerProgress = 1;
@@ -294,7 +297,7 @@ public class FPSControl : MonoBehaviour {
 
     public void Thomas()
     {
-        Objetivo.text = "Vá até a porta e investigue lá fora.";
+        ObjetivoGlobal.Objetivo = "Vá até a porta e investigue lá fora.";
         thomas.SetActive(true);
         Invoke("Naohaviatrem", 2f);
     }
@@ -347,6 +350,25 @@ public class FPSControl : MonoBehaviour {
         transform.position = new Vector3(Tx, Ty, Tz);
         transform.rotation = Quaternion.Euler(Rx, Ry, Rz);
         player.enabled = true;
+    }
+
+    public void ToStation()
+    {
+        TeleportPlayer(-119.213f, 52.4f, 0.15f, 0, -180f, 0);
+        transform.SetParent(GameObject.Find("Carrinho").transform);
+        //moveLock = true;
+        Invoke("FadeOut", 4f);
+        Invoke("LoadStation", 6f);
+    }
+
+    public void FadeOut()
+    {
+
+    }
+
+    public void LoadStation()
+    {
+
     }
 
 
