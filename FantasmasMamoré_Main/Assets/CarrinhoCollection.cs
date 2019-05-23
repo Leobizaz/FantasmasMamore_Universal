@@ -7,6 +7,7 @@ public class CarrinhoCollection : MonoBehaviour
 
     public GameObject trolleyMDL;
     public GameObject rodasMDL;
+    public bool ready;
 
     private GameObject carrinho;
     private CarrinhoMechanics carrinhoScript;
@@ -31,43 +32,46 @@ public class CarrinhoCollection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Pickupable Object" && other.name == "Trolley Alavanca")
+        if (ready)
         {
-            other.tag = "Untagged";
-            Invoke("SetPositionAlavanca", 0.1f);
-            objAlavanca = other.gameObject;
-            other.transform.SetParent(trolleyMDL.transform);
-            other.transform.position = new Vector3(-0.001062802f, 0.891f, 2.280899e-06f);
-            other.transform.rotation = Quaternion.Euler(0, 0, 0);
-            other.GetComponent<Rigidbody>().isKinematic = true;
-            other.GetComponent<BoxCollider>().enabled = false;
-            alavanca = true;
-        }
+            if (other.tag == "Pickupable Object" && other.name == "Trolley Alavanca")
+            {
+                other.tag = "Untagged";
+                Invoke("SetPositionAlavanca", 0.1f);
+                objAlavanca = other.gameObject;
+                other.transform.SetParent(trolleyMDL.transform);
+                other.transform.position = new Vector3(-0.001062802f, 0.891f, 2.280899e-06f);
+                other.transform.rotation = Quaternion.Euler(0, 0, 0);
+                other.GetComponent<Rigidbody>().isKinematic = true;
+                other.GetComponent<BoxCollider>().enabled = false;
+                alavanca = true;
+            }
 
-        if (other.tag == "Pickupable Object" && other.name == "Trolley Engrenagem")
-        {
-            other.tag = "Untagged";
-            Invoke("SetPositionEngrenagem", 0.1f);
-            objEngrenagem = other.gameObject;
-            other.transform.SetParent(trolleyMDL.transform);
-            other.transform.position = new Vector3(-0.001062802f, 0.891f, 2.280899e-06f);
-            other.transform.rotation = Quaternion.Euler(0, 0, 0);
-            other.GetComponent<Rigidbody>().isKinematic = true;
-            other.GetComponent<BoxCollider>().enabled = false;
-            engrenagem = true;
-        }
+            if (other.tag == "Pickupable Object" && other.name == "Trolley Engrenagem")
+            {
+                other.tag = "Untagged";
+                Invoke("SetPositionEngrenagem", 0.1f);
+                objEngrenagem = other.gameObject;
+                other.transform.SetParent(trolleyMDL.transform);
+                other.transform.position = new Vector3(-0.001062802f, 0.891f, 2.280899e-06f);
+                other.transform.rotation = Quaternion.Euler(0, 0, 0);
+                other.GetComponent<Rigidbody>().isKinematic = true;
+                other.GetComponent<BoxCollider>().enabled = false;
+                engrenagem = true;
+            }
 
-        if (other.tag == "Pickupable Object" && other.name == "Roda8")
-        {
-            other.tag = "Untagged";
-            Invoke("SetPositionRoda", 0.1f);
-            objRoda = other.gameObject;
-            //other.transform.SetParent(rodasMDL.transform);
-            other.transform.position = new Vector3(-0.001062802f, 0.891f, 2.280899e-06f);
-            other.transform.rotation = Quaternion.Euler(0, 0, 0);
-            other.GetComponent<Rigidbody>().isKinematic = true;
-            other.GetComponent<BoxCollider>().enabled = false;
-            roda = true;
+            if (other.tag == "Pickupable Object" && other.name == "Roda8")
+            {
+                other.tag = "Untagged";
+                Invoke("SetPositionRoda", 0.1f);
+                objRoda = other.gameObject;
+                //other.transform.SetParent(rodasMDL.transform);
+                other.transform.position = new Vector3(-0.001062802f, 0.891f, 2.280899e-06f);
+                other.transform.rotation = Quaternion.Euler(0, 0, 0);
+                other.GetComponent<Rigidbody>().isKinematic = true;
+                other.GetComponent<BoxCollider>().enabled = false;
+                roda = true;
+            }
         }
 
     }

@@ -11,7 +11,7 @@ public class DialogueTriggers : MonoBehaviour
 
     void Start()
     {
-        playeraudio = GameObject.Find("Player Ato 1").GetComponent<AudioSource>();
+        playeraudio = GameObject.Find("/Player Ato 1").GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)

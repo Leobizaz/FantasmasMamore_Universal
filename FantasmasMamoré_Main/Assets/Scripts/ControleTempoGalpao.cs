@@ -17,10 +17,15 @@ public class ControleTempoGalpao : MonoBehaviour
     public GameObject telavitoria;
     public Animator portasAbre;
 
+    public GameObject PortaAto1;
+    public GameObject TriggerCamaAto1;
+    public GameObject TriggersAto3;
+
     public GameController_Ato_1 gameController;
 
     public GameObject[] fantasmas;
     public GameObject deathFX;
+
 
     public static float time;
 
@@ -71,6 +76,9 @@ public class ControleTempoGalpao : MonoBehaviour
                 Invoke("Vitorial", 7f);
                 gameController.Ato1.SetActive(true);
                 gameController.trem.SetActive(false);
+                PortaAto1.SetActive(false);
+                TriggerCamaAto1.SetActive(false);
+                TriggersAto3.SetActive(true);
             }
             if(sky.Cycle.Hour >= 12)
             {
@@ -83,7 +91,7 @@ public class ControleTempoGalpao : MonoBehaviour
 
     public void StartEvent()
     {
-        Invoke("EnableDialogos", 3f);
+        Invoke("EnableDialogos", 6f);
         SpawnInimigo.SetActive(true);
         Spawn = true;
         GameController_Ato_1.AI_Enabled = true;
@@ -128,6 +136,7 @@ public class ControleTempoGalpao : MonoBehaviour
             abriu = true;
             Globals.playerProgress = 4;
             portasAbre.Play("open");
+            ObjetivoGlobal.Objetivo = "Procure pelo seu corpo na cabana onde acordou";
         }
     }
 }

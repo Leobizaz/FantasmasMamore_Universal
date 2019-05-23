@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CarrinhoMechanics : MonoBehaviour
 {
-
+    public FPSControl playerscript;
     public bool constructed;
 
     private bool played;
@@ -27,9 +27,16 @@ public class CarrinhoMechanics : MonoBehaviour
             anim.Play("TrolleyPrepare");
         }
 
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("TrolleyReady"))
+        {
+            constructed = false;
+            gameObject.tag = "Interactable";
+        }
 
 
-        currentSpeed = anim.speed;
+
+
+            currentSpeed = anim.speed;
         if (fallOff)
         {
             anim.speed = Mathf.MoveTowards(anim.speed, 0,  0.8f * Time.deltaTime);
@@ -40,7 +47,17 @@ public class CarrinhoMechanics : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player" && constructed)
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("TrolleyReady") && other.tag == "Player" && Input.GetButtonDown("Fire1"))
+        {
+            anim.Play("TrolleyLeave");
+            gameObject.tag = "Untagged";
+            playerscript.ToStation();
+            fallOff = false;
+            anim.speed = 1;
+        }
+
+        if (other.tag == "Player" && constructed)
         {
             fallOff = false;
             anim.speed = 1;
