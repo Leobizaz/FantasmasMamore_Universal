@@ -6,11 +6,12 @@ public class PickUp : MonoBehaviour
 {
     public GameObject eyes;
     GameObject grabbedObject;
+    Rigidbody objRb;
     float grabbedObjectSize;
 
     void Start()
     {
-        
+        objRb = grabbedObject.GetComponent<Rigidbody>();
     }
 
     GameObject GetMouseHoverObject(float range)
@@ -34,7 +35,10 @@ public class PickUp : MonoBehaviour
 
         grabbedObject = grabObject;
         grabbedObjectSize = grabObject.GetComponent<Renderer>().bounds.size.magnitude;
-        grabbedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+        objRb.constraints = RigidbodyConstraints.FreezeRotation;
+        objRb.useGravity = false;
+        objRb.isKinematic = true;
+        grabbedObject.transform.SetParent(gameObject.transform);
     }
 
     bool CanGrab(GameObject candidate)
@@ -73,20 +77,20 @@ public class PickUp : MonoBehaviour
                 DropObject();
         }
 
-        if(grabbedObject != null && grabbedObject.tag == "Pickupable Object")
-        {
-            /*
-                Vector3 newPosition = gameObject.transform.position + Camera.main.transform.forward * grabbedObjectSize;
-             grabbedObject.transform.position = newPosition;
-             grabbedObject.transform.rotation = Quaternion.Euler(-26, grabbedObject.transform.rotation.y, -90);
-             //grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
-             */
+        //if(grabbedObject != null && grabbedObject.tag == "Pickupable Object")
+        //{
+        //    /*
+        //        Vector3 newPosition = gameObject.transform.position + Camera.main.transform.forward * grabbedObjectSize;
+        //     grabbedObject.transform.position = newPosition;
+        //     grabbedObject.transform.rotation = Quaternion.Euler(-26, grabbedObject.transform.rotation.y, -90);
+        //     //grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
+        //     */
 
-            grabbedObject.transform.parent = eyes.transform;
-            grabbedObject.GetComponent<Rigidbody>().useGravity = false;
-            Vector3 newPosition = gameObject.transform.position + Camera.main.transform.forward * grabbedObjectSize;
-            grabbedObject.transform.position = newPosition;
+        //    grabbedObject.transform.parent = eyes.transform;
+        //    grabbedObject.GetComponent<Rigidbody>().useGravity = false;
+        //    Vector3 newPosition = gameObject.transform.position + Camera.main.transform.forward * grabbedObjectSize;
+        //    grabbedObject.transform.position = newPosition;
 
-        }
+        //}
     }
 }
