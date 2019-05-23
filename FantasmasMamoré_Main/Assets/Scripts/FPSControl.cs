@@ -20,6 +20,7 @@ public class FPSControl : MonoBehaviour {
     public GameObject trem;
     public GameObject enemies;
     public TOD_Sky sky;
+    public GameObject lampada;
 
 
     private PlayerState playerState;
@@ -124,6 +125,9 @@ public class FPSControl : MonoBehaviour {
     void Update()
     {
         sensitivity = VolumeBrightness.Saved_sensibilidade;
+
+        if (ControleTempoGalpao.time >= 7) lampada.SetActive(false);
+        else lampada.SetActive(true);
     }
     // Update is called once per frame
     void FixedUpdate () {

@@ -22,6 +22,8 @@ public class ControleTempoGalpao : MonoBehaviour
     public GameObject[] fantasmas;
     public GameObject deathFX;
 
+    public static float time;
+
     public GameObject dialogos;
     private DialogosGalpao dialogosScript;
 
@@ -45,6 +47,9 @@ public class ControleTempoGalpao : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        time = sky.Cycle.Hour;
+
         if (Spawn == true)
         {
             //Timeleft -= Time.deltaTime;

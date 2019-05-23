@@ -7,7 +7,7 @@ public class Globals : MonoBehaviour
 {
     public static bool gameOver = false;
     public static bool pause = false;
-    public static int playerProgress = 3;
+    public static int playerProgress = 4;
     public static float photoscollected;
 
     public GameObject player;
