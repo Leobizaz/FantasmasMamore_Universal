@@ -27,8 +27,10 @@ public class ControleTempoGalpao : MonoBehaviour
     public GameObject[] fantasmas;
     public GameObject deathFX;
 
+    public GameObject chicoF;
 
     public static float time;
+    public ObjetivoGlobal objetivo;
 
     public GameObject dialogos;
     private DialogosGalpao dialogosScript;
@@ -81,6 +83,7 @@ public class ControleTempoGalpao : MonoBehaviour
                 PortaAto1.SetActive(false);
                 TriggerCamaAto1.SetActive(false);
                 TriggersAto3.SetActive(true);
+                chicoF.SetActive(false);
             }
             if(sky.Cycle.Hour >= 12)
             {
@@ -138,6 +141,7 @@ public class ControleTempoGalpao : MonoBehaviour
             abriu = true;
             Globals.playerProgress = 4;
             portasAbre.Play("open");
+            objetivo.AtualizaObjetivo();
             ObjetivoGlobal.Objetivo = "Procurar pelo meu corpo na cabana onde durmo.";
         }
     }

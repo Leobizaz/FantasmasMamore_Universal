@@ -1672,6 +1672,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 24.183332
+    functionName: Musica
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 30.666666
     functionName: WideScreenInF
     data: 

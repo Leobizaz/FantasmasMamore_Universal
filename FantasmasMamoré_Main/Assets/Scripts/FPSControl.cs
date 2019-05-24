@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class FPSControl : MonoBehaviour {
     public GameObject vilao;
@@ -21,6 +22,9 @@ public class FPSControl : MonoBehaviour {
     public GameObject enemies;
     public TOD_Sky sky;
     public GameObject lampada;
+    public GameObject falaRespawn;
+    public Animator fadeOut;
+    bool ledge;
 
     public ControleTempoGalpao controleTempo;
 
@@ -58,6 +62,9 @@ public class FPSControl : MonoBehaviour {
 
     public static bool beliche;
 
+    public GameObject chicoF;
+    public ObjetivoGlobal objetivo;
+
 
 
     // Use this for initialization
@@ -84,7 +91,8 @@ public class FPSControl : MonoBehaviour {
             UnlockMovement();
             cutscene.WideScreenInF();
             vilao.SetActive(true);
-            //vilao.transform.parent.gameObject.GetComponent<Animator>().
+            falaRespawn.SetActive(true);
+            Invoke("VilaoAnimation", 6f);
             vilaoanim.SetActive(true);
             killme.enemyBatch_1.SetActive(true);
             TeleportPlayer(9.54f, 51f, 14.4f, 0, -189f, 0);
@@ -93,7 +101,7 @@ public class FPSControl : MonoBehaviour {
         }
         else if(Globals.playerProgress == 2)
         {
-            ObjetivoGlobal.Objetivo = "Preciso encontrar um caminho alternativo para voltar à vila.";
+            ObjetivoGlobal.Objetivo = "Preciso encontrar respostas.";
             UnlockMovement();
             cutscene.WideScreenInF();
             killme.Ato1.SetActive(false);
@@ -121,6 +129,7 @@ public class FPSControl : MonoBehaviour {
             controleTempo.luzes.SetActive(false);
             controleTempo.ColisoesAto3.SetActive(true);
             enemies.SetActive(false);
+            chicoF.SetActive(false);
             sky.Cycle.Hour = 12f;
             TeleportPlayer(-121, 51, 28, 0, 82, 0);
 
@@ -246,12 +255,14 @@ public class FPSControl : MonoBehaviour {
 
     public void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.tag == "Ledge")
+        if(col.gameObject.tag == "Ledge" && !ledge)
         {
-            moveLock = true;
+            ledge = true;
+            //moveLock = true;
             TeleportPlayer(261.08f, 66.57f, 321.93f, 0, -91.84f, 0);
             anim.Play("Ledge");
             ObjetivoGlobal.Objetivo = "Encontre um caminho alternativo para voltar à vila";
+            objetivo.AtualizaObjetivo();
             killme.Ato1.SetActive(false);
             enemies.SetActive(false);
             Globals.playerProgress = 2;
@@ -265,7 +276,8 @@ public class FPSControl : MonoBehaviour {
     }
     public void Obj2()
     {
-        obj2.SetActive(true);
+        //obj2.SetActive(true);
+        objetivo.AtualizaObjetivo();
     }
 
     public void Continue()
@@ -276,22 +288,31 @@ public class FPSControl : MonoBehaviour {
     public void End()
     {
         Dialogo.SetActive(false);
-        obj1.SetActive(true);
+        objetivo.AtualizaObjetivo();
+        //obj1.SetActive(true);
     }
     public void End2()
     {
         Dialogo2.SetActive(false);
-        obj2.SetActive(true);
+        //obj2.SetActive(true);
+        objetivo.AtualizaObjetivo();
         Invoke("Thomas", 1.8f);
     }
     public void End3()
     {
         ObjetivoGlobal.Objetivo = "Escape pela mata até chegar na beira do rio.";
         Dialogo3.SetActive(false);
-        musica.SetActive(true);
+        //musica.SetActive(true);
         Globals.playerProgress = 1;
-        obj3.SetActive(true);
+        //obj3.SetActive(true);
+        objetivo.AtualizaObjetivo();
     }
+
+    public void Musica()
+    {
+        musica.SetActive(true);
+    }
+
 
     public void StartText()
     {
@@ -375,14 +396,24 @@ public class FPSControl : MonoBehaviour {
         Invoke("LoadStation", 6f);
     }
 
+    public void VilaoAnimation()
+    {
+        vilao.transform.GetComponentInChildren<Animator>().Play("charge");
+    }
+
     public void FadeOut()
     {
-
+        fadeOut.Play("FadeOut");
     }
 
     public void LoadStation()
     {
+        SceneManager.LoadScene("LoadingScreenAtoFinal");
+    }
 
+    public void AtualizaOObjetivo()
+    {
+        objetivo.AtualizaObjetivo();
     }
 
 

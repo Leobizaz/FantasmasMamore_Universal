@@ -32,7 +32,7 @@ public class MulherBehaviour : MonoBehaviour
     }
     void NextPlace1()
     {
-        audio.Play();
+        //audio.Play();
         agent.SetDestination(new Vector3(-111, 50, 316));
     }
 

@@ -6,15 +6,22 @@ using TMPro;
 public class ObjetivoGlobal : MonoBehaviour
 {
     public static string Objetivo = "a";
-    private TextMeshProUGUI text;
+    public TextMeshProUGUI text;
+    private Animator popup;
 
     void Start()
     {
-        text = GetComponent<TextMeshProUGUI>();
+        popup = GetComponent<Animator>();
     }
 
     void Update()
     {
         text.text = Objetivo;
     }
+
+    public void AtualizaObjetivo()
+    {
+        popup.Play("Objetivos");
+    }
+
 }

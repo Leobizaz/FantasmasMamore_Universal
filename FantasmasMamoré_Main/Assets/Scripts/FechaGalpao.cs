@@ -13,6 +13,7 @@ public class FechaGalpao : MonoBehaviour
     public GameObject E;
     public GameObject dialogotabua;
     public GameObject musica;
+    public ObjetivoGlobal objetivo;
 
     public ControleTempoGalpao xisde;
 
@@ -32,6 +33,8 @@ public class FechaGalpao : MonoBehaviour
     {
         if(col.gameObject.tag == "Player" && !ativo)
         {
+            objetivo.AtualizaObjetivo();
+            ObjetivoGlobal.Objetivo = "Posso tentar usar as tábuas soltas por aqui para não deixar essas maldições entrarem...";
             musica.SetActive(true);
             ativo = true;
             porta.transform.rotation = Quaternion.Euler(0, 84.815f, 0);

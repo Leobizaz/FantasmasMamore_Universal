@@ -7,6 +7,8 @@ public class DialogueTriggers : MonoBehaviour
     public bool autoDestroy = true;
     public AudioClip audioclip;
     public AudioSource playeraudio;
+    public ObjetivoGlobal objetivo;
+    public bool objetivado;
     private bool once;
 
     void Start()
@@ -18,6 +20,11 @@ public class DialogueTriggers : MonoBehaviour
     {
         if(other.tag == "Player" && !once)
         {
+            if (objetivado)
+            {
+                objetivo.AtualizaObjetivo();
+                ObjetivoGlobal.Objetivo = "Preciso encontrar respostas.";
+            }
             once = true;
             playeraudio.clip = audioclip;
             playeraudio.Play();

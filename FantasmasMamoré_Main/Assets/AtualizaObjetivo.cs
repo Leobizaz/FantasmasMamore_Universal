@@ -7,6 +7,7 @@ public class AtualizaObjetivo : MonoBehaviour
     public string text;
     public float delay = 0f;
     private bool once;
+    public ObjetivoGlobal objetivoglobal;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,6 +21,7 @@ public class AtualizaObjetivo : MonoBehaviour
     void DoIt()
     {
         ObjetivoGlobal.Objetivo = text;
+        objetivoglobal.AtualizaObjetivo();
     }
 
 }
