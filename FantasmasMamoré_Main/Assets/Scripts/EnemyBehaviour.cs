@@ -27,7 +27,7 @@ public class EnemyBehaviour : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        anim = transform.Find("Idle").gameObject.GetComponent<Animator>();
+        anim = transform.Find("fantasma").gameObject.GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         agent.enabled = false;
     }
