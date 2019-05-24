@@ -38,19 +38,19 @@ public class Evento_Galpao : MonoBehaviour
     //(3.142, -7.389, 86.13)
 
     // Posicoes das tabuas na barreira 2
-    //(-115.5273f, 51.986f, 42.03056f)
-    //(-115.5543f, 51.074f, 42.14034f)
-    //(-115.59f, 50.466f, 42.215f)
-    //(-115.6498f, 50.787f, 42.19544f)
-    //(-115.6323f, 51.524f, 42.13258f)
+    //(-115.5273f, 51.986f, 42.03056f) | -131.977   51.81   43.595
+    //(-115.5543f, 51.074f, 42.14034f) | -131.965   52.484  43.505
+    //(-115.59f, 50.466f, 42.215f)  | -131.938  51.163  43.497
+    //(-115.6498f, 50.787f, 42.19544f) | -131.923   50.584  43.463
+    //(-115.6323f, 51.524f, 42.13258f)  | -131.882  51.467  43.474
 
     // Rotacoes das tabuas na barreira 2
-    //(-7.2f, -185.784f, -88.633f)
-    //(6.940001f, -185.448f, -88.634f)
-    //(0f, -185.613f, -88.644f)
-    //(-8.585f, -186.163f, -88.206f)
-    //(-2.155f, -185.093f, -88.594f)
-
+    //(-7.2f, -185.784f, -88.633f)            |   0 -186.9  90
+    //(6.940001f, -185.448f, -88.634f) | 9.52   -185.871    88.85
+    //(0f, -185.613f, -88.644f) |  -3.449   -185.613    88.866
+    //(-8.585f, -186.163f, -88.206f) |  0.664   -185.694    88.868
+    //(-2.155f, -185.093f, -88.594f) |  -37.674 -184.806    88.569
+     
     void Awake()
     {
         for (int i = 0; i < 5; i++) rotation[i] = Quaternion.Euler(rotationEuler[i]);
@@ -65,17 +65,18 @@ public class Evento_Galpao : MonoBehaviour
         {
             collider.enabled = false;
         }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.name == "OBJ_Tabua" && index < 5)
         {
+            other.tag = "Untagged";
             StoredTabua[index] = other.gameObject;
             other.transform.parent = this.transform;
             other.transform.position = position[index];
             other.transform.rotation = rotation[index];
-            other.tag = "Untagged";
             other.attachedRigidbody.isKinematic = true;
             other.attachedRigidbody.useGravity = false;
             other.attachedRigidbody.constraints = RigidbodyConstraints.FreezeAll;
