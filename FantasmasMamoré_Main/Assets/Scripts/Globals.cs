@@ -17,6 +17,8 @@ public class Globals : MonoBehaviour
 
     private void Awake()
     {
+        pause = false;
+        Time.timeScale = 1;
         if (player.name == "Player Ato 1")
             playerScript = player.GetComponent<FPSControl>();
         else

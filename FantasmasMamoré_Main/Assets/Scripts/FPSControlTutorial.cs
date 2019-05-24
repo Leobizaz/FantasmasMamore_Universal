@@ -23,6 +23,7 @@ public class FPSControlTutorial : MonoBehaviour {
 
     public float gravity = 100.0f;
 
+    public GameObject Fase3;
 
     // Use this for initialization
     void Start () {
@@ -30,6 +31,7 @@ public class FPSControlTutorial : MonoBehaviour {
         rb = this.GetComponent<Rigidbody>();
         speedfactor = 1;
         lastCoroutine = null;
+        Fase3.SetActive(false);
 	}
 
 
@@ -61,18 +63,22 @@ public class FPSControlTutorial : MonoBehaviour {
         float horizontalSpeed = horizontalVelocity.magnitude;
 
 
-        if (Input.GetKey(KeyCode.LeftShift) && horizontalSpeed > 1)
+        if (Input.GetKey(KeyCode.LeftShift) && horizontalSpeed > 1 )
         {
             Run();
             //StopCoroutine(lastCoroutine);
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift) || horizontalSpeed < 1)
+        if (Input.GetKeyUp(KeyCode.LeftShift) || horizontalSpeed < 1 )
         {
 
             CameraRun.speed = 0f;
             lastCoroutine = StartCoroutine("Stoprun");
         }
-
+     //   if(Fase3 == true)
+      //  {
+     //       speed = 3;
+    //        CameraRunTutorial.speed = Mathf.Round(1 * 6);
+    //    }
     }
 
     public void Run()
@@ -124,6 +130,8 @@ public class FPSControlTutorial : MonoBehaviour {
     {
         GetComponent<PlayerSoundsTutorial>().Play("praja");
     }
+
+
 
 
 }

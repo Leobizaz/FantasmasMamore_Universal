@@ -131,7 +131,7 @@ public class TutorialController : MonoBehaviour
     void UpdateObjetivo()
     {
         //atualiza objetivo
-        //objetivo.Play("objetivoatualizado_in");
+        objetivo.Play("objetivoatualizado_in");
     }
 
     IEnumerator Phase3Dialogos()

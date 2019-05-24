@@ -15,6 +15,6 @@ public class NPC1_Walktoposition : MonoBehaviour
 
     public void Walk()
     {
-        agent.SetDestination(new Vector3(-69.7f, 1.05f, 96.8f));
+        agent.SetDestination(new Vector3(-60f, 1f, 92.5f));
     }
 }

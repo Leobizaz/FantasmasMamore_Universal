@@ -29,6 +29,7 @@ public class VolumeBrightness : MonoBehaviour
     private void Awake()
     {
         GetSavedOptions();
+        Time.timeScale = 1;
     }
 
     private void Update()

@@ -15,6 +15,7 @@ public class MovScreenMenu : MonoBehaviour
     public GameObject music;
     public GameObject apito;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +54,8 @@ public class MovScreenMenu : MonoBehaviour
 
         Invoke("LoadAct1", 4f);
     }
+
+
 
     // Start is called before the first frame update
     void Update()
