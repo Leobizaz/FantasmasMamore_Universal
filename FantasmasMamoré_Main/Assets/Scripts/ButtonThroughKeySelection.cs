@@ -55,14 +55,21 @@ public class ButtonThroughKeySelection : MonoBehaviour
                 else if (Input.GetKeyDown(KeyCode.DownArrow) && buttonIndex == 3) EventSystem.current.SetSelectedGameObject(menuButton[3]);
                 else if (Input.GetKeyDown(KeyCode.UpArrow) && buttonIndex == 0) EventSystem.current.SetSelectedGameObject(menuButton[0]);
 
-                if (Input.GetKeyDown(KeyCode.Space) && buttonIndex == 1) screen = "Opcoes";
-                if (Input.GetKeyDown(KeyCode.Space) && buttonIndex == 2) screen = "Creditos";
-                if (Input.GetKeyDown(KeyCode.Space) && buttonIndex == 3) screen = "Sair";
+                if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) && buttonIndex == 1) screen = "Opcoes";
+                if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) && buttonIndex == 2) screen = "Creditos";
+                if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) && buttonIndex == 3) screen = "Sair";
             }
         }
 
         if (screen == "Opcoes")
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                EventSystem.current.SetSelectedGameObject(backOpcoes);
+                screen = "Menu";
+                buttonIndex = 0;
+            }
+
             if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.RightArrow) ||
                 Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
@@ -70,7 +77,7 @@ public class ButtonThroughKeySelection : MonoBehaviour
                 backSelected = true;
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) && backSelected)
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) && backSelected)
             {
                 screen = "Menu";
                 buttonIndex = 0;
@@ -79,6 +86,14 @@ public class ButtonThroughKeySelection : MonoBehaviour
 
         if (screen == "Creditos")
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                EventSystem.current.SetSelectedGameObject(backCreditos);
+                screen = "Menu";
+                buttonIndex = 0;
+            }
+
+
             if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.RightArrow) ||
                 Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
@@ -107,7 +122,7 @@ public class ButtonThroughKeySelection : MonoBehaviour
                 backSelected = true;
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) && backSelected)
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) && backSelected)
             {
                 screen = "Menu";
                 buttonIndex = 0;
