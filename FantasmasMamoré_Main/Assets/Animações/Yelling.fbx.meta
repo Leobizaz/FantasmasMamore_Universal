@@ -80,6 +80,7 @@ ModelImporter:
     400072: polySurface6
     400074: //RootNode
     2100000: No Name
+    2100002: defaultMat
     2300000: default
     2300002: hand_04:default1
     3300000: default
@@ -99,6 +100,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: No Name
     second: {fileID: 2100000, guid: faf3839ac3dbbc149b4638609b5cef3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: defaultMat
+    second: {fileID: 2100000, guid: fd1b8ba0ea84cc84f80d1dab465d8667, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -19,6 +19,8 @@ public class ControleTempoGalpao : MonoBehaviour
     public GameObject PortaAto1;
     public GameObject TriggerCamaAto1;
     public GameObject TriggersAto3;
+    public GameObject ColisoesAto3;
+    public GameObject luzes;
 
     public GameController_Ato_1 gameController;
 
@@ -74,6 +76,7 @@ public class ControleTempoGalpao : MonoBehaviour
                 somposchase.SetActive(true);
                 Invoke("Vitorial", 7f);
                 gameController.Ato1.SetActive(true);
+                ColisoesAto3.SetActive(true);
                 gameController.trem.SetActive(false);
                 PortaAto1.SetActive(false);
                 TriggerCamaAto1.SetActive(false);
@@ -82,6 +85,7 @@ public class ControleTempoGalpao : MonoBehaviour
             if(sky.Cycle.Hour >= 12)
             {
                 skytime.ProgressTime = false;
+                luzes.SetActive(false);
             }
 
         }
@@ -134,7 +138,7 @@ public class ControleTempoGalpao : MonoBehaviour
             abriu = true;
             Globals.playerProgress = 4;
             portasAbre.Play("open");
-            ObjetivoGlobal.Objetivo = "Procure pelo seu corpo na cabana onde acordou";
+            ObjetivoGlobal.Objetivo = "Procurar pelo meu corpo na cabana onde durmo.";
         }
     }
 }

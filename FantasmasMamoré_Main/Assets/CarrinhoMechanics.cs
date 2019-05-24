@@ -24,6 +24,7 @@ public class CarrinhoMechanics : MonoBehaviour
         if (constructed && !played)
         {
             played = true;
+            ObjetivoGlobal.Objetivo = "Preciso empurrar o carrinho até o trilho e subir.";
             anim.Play("TrolleyPrepare");
         }
 
@@ -42,21 +43,24 @@ public class CarrinhoMechanics : MonoBehaviour
             anim.speed = Mathf.MoveTowards(anim.speed, 0,  0.8f * Time.deltaTime);
             if (anim.speed <= 0) fallOff = false;
         }
+
+        if (CarrinhoCollection.playerOnRange)
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("TrolleyReady") && Input.GetButtonDown("Fire1"))
+            {
+                anim.Play("TrolleyLeave");
+                gameObject.tag = "Untagged";
+                playerscript.ToStation();
+                fallOff = false;
+                anim.speed = 1;
+            }
+        }
+
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("TrolleyReady") && other.tag == "Player" && Input.GetButtonDown("Fire1"))
-        {
-            anim.Play("TrolleyLeave");
-            gameObject.tag = "Untagged";
-            playerscript.ToStation();
-            fallOff = false;
-            anim.speed = 1;
-        }
-
         if (other.tag == "Player" && constructed)
         {
             fallOff = false;

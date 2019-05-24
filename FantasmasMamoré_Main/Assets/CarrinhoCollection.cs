@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CarrinhoCollection : MonoBehaviour
 {
+    public static bool playerOnRange;
 
     public GameObject trolleyMDL;
     public GameObject rodasMDL;
@@ -32,6 +33,12 @@ public class CarrinhoCollection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other.tag == "Player")
+        {
+            playerOnRange = true;
+        }
+
+
         if (ready)
         {
             if (other.tag == "Pickupable Object" && other.name == "Trolley Alavanca")
@@ -102,4 +109,13 @@ public class CarrinhoCollection : MonoBehaviour
         objRoda.transform.localPosition = new Vector3(1.213f, -0.1462065f, -1.072f);
         objRoda.transform.localRotation = Quaternion.Euler(0, 0, -90);
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            playerOnRange = false;
+        }
+    }
+
 }

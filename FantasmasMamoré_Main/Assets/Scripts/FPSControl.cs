@@ -76,14 +76,15 @@ public class FPSControl : MonoBehaviour {
         {
             anim.Play("Cutscene Inicial");
             audio.Play();
-            ObjetivoGlobal.Objetivo = "Investigue a casa.";
+            ObjetivoGlobal.Objetivo = "Investigar a casa.";
         }
         else if(Globals.playerProgress == 1)
         {
-            ObjetivoGlobal.Objetivo = "Fuja dos fantasmas";
+            ObjetivoGlobal.Objetivo = "Fugir dos fantasmas!";
             UnlockMovement();
             cutscene.WideScreenInF();
             vilao.SetActive(true);
+            //vilao.transform.parent.gameObject.GetComponent<Animator>().
             vilaoanim.SetActive(true);
             killme.enemyBatch_1.SetActive(true);
             TeleportPlayer(9.54f, 51f, 14.4f, 0, -189f, 0);
@@ -92,7 +93,7 @@ public class FPSControl : MonoBehaviour {
         }
         else if(Globals.playerProgress == 2)
         {
-            ObjetivoGlobal.Objetivo = "Encontre um caminho alternativo para voltar à vila";
+            ObjetivoGlobal.Objetivo = "Preciso encontrar um caminho alternativo para voltar à vila.";
             UnlockMovement();
             cutscene.WideScreenInF();
             killme.Ato1.SetActive(false);
@@ -101,7 +102,7 @@ public class FPSControl : MonoBehaviour {
         }
         else if (Globals.playerProgress == 3)
         {
-            ObjetivoGlobal.Objetivo = "Fale com a mulher que parece estar perdida";
+            ObjetivoGlobal.Objetivo = "Falar com a mulher que parece estar perdida";
             UnlockMovement();
             cutscene.WideScreenInF();
             killme.Ato1.SetActive(false);
@@ -110,13 +111,15 @@ public class FPSControl : MonoBehaviour {
         }
         else if(Globals.playerProgress == 4)
         {
-            ObjetivoGlobal.Objetivo = "Procure pelo seu corpo na cabana onde acordou";
+            ObjetivoGlobal.Objetivo = "Procurar pelo meu corpo na cabana onde durmo";
             UnlockMovement();
             cutscene.WideScreenInF();
             trem.SetActive(false);
             controleTempo.TriggerCamaAto1.SetActive(false);
             controleTempo.PortaAto1.SetActive(false);
             controleTempo.TriggersAto3.SetActive(true);
+            controleTempo.luzes.SetActive(false);
+            controleTempo.ColisoesAto3.SetActive(true);
             enemies.SetActive(false);
             sky.Cycle.Hour = 12f;
             TeleportPlayer(-121, 51, 28, 0, 82, 0);
@@ -354,8 +357,19 @@ public class FPSControl : MonoBehaviour {
 
     public void ToStation()
     {
-        TeleportPlayer(-119.213f, 52.4f, 0.15f, 0, -180f, 0);
-        transform.SetParent(GameObject.Find("Carrinho").transform);
+        player.enabled = false;
+
+        //TeleportPlayer(-119.213f, 52.4f, 0.15f, 0, -180f, 0);
+
+        transform.parent.gameObject.transform.parent = GameObject.Find("Carrinho").transform;
+        transform.localPosition = Vector3.zero;
+        transform.position = new Vector3(-119.213f, 52.4f, 0.15f);
+        transform.rotation = Quaternion.Euler(0, -180f, 0);
+        transform.parent.gameObject.transform.localPosition = Vector3.zero;
+        transform.parent.gameObject.transform.localPosition = new Vector3(-0.01f, 0.9f, -2.04f);
+        transform.parent.gameObject.transform.localRotation = Quaternion.Euler(0, 90, 0);
+
+        moveLock = true;
         //moveLock = true;
         Invoke("FadeOut", 4f);
         Invoke("LoadStation", 6f);
