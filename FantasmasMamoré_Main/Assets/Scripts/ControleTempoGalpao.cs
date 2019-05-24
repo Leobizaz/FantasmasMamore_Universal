@@ -11,7 +11,6 @@ public class ControleTempoGalpao : MonoBehaviour
     public bool Spawn = false;
     public static bool BomDia = false;
     public GameObject dialogoacabo;
-    public GameObject dialogotomaraquefuncione;
     public GameObject musica;
     public GameObject somposchase;
     public GameObject telavitoria;
@@ -107,7 +106,6 @@ public class ControleTempoGalpao : MonoBehaviour
     {
         if(col.gameObject.tag == "Pickupable Object" && !coiso)
         {
-            dialogotomaraquefuncione.SetActive(true);
             coiso = true;
 
         }
