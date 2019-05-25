@@ -392,8 +392,8 @@ public class FPSControl : MonoBehaviour {
 
         moveLock = true;
         //moveLock = true;
-        Invoke("FadeOut", 4f);
-        Invoke("LoadStation", 6f);
+        Invoke("FadeOut", 8f);
+        Invoke("LoadStation", 12f);
     }
 
     public void VilaoAnimation()

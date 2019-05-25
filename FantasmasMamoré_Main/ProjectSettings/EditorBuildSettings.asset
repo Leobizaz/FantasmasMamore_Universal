@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ato 1.unity
     guid: 23b3d171c4c79154fbb88172378dccd6
+  - enabled: 1
+    path: Assets/Scenes/LoadingScreenAtoFinal.unity
+    guid: 16867dc9611a3e74b80be2d2c22aa7d9
+  - enabled: 1
+    path: Assets/Scenes/AtoFinal.unity
+    guid: 17acb72866190ed47bbd9854f19904c3
   m_configObjects: {}

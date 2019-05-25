@@ -47,6 +47,11 @@ public class TutorialController : MonoBehaviour
         txtObjetivo.text = "Siga o trabalhador até o local de trabalho.";
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F1)) NextScene();
+    }
+
     public void Phase2()
     {
         //fade out

@@ -120,7 +120,7 @@ public class PickUp : MonoBehaviour
             //grabbedObject.transform.rotation = newRotation;
 
             
-            grabbedObject.transform.parent = hand.transform;
+            //grabbedObject.transform.parent = hand.transform;
 
             grabbedObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
             //grabbedObject.transform.LookAt(this.gameObject.transform);
