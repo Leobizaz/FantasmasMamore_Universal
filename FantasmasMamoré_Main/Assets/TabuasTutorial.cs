@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TabuasTutorial : MonoBehaviour
 {
-    [SerializeField] int index = 0;
+    [SerializeField]public static int index = 0;
 
     public Vector3[] position = new Vector3[5];
     public Vector3[] rotationEuler = new Vector3[5];
@@ -19,7 +19,6 @@ public class TabuasTutorial : MonoBehaviour
 
 
     //0 0   0
-
 
 
 

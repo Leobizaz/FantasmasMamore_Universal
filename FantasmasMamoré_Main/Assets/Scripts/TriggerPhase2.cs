@@ -7,13 +7,14 @@ public class TriggerPhase2 : MonoBehaviour
     public TutorialController tutorial;
     public GameObject dialogo;
 
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if (other.tag == "Pickupable Object" && other.name == "Tabua")
+        if (TabuasTutorial.index == 3)
         {
             dialogo.SetActive(true);
             tutorial.Phase3();
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
+

@@ -16,6 +16,7 @@ public class TutorialController : MonoBehaviour
     private Animator fadeAnim;
     public Animator objetivo;
     CharacterController controller;
+    public GameObject obj;
 
     public GameObject phase1;
     public GameObject phase2;
@@ -56,7 +57,7 @@ public class TutorialController : MonoBehaviour
     {
         //fade out
         fadeAnim.Play("FadeOut");
-        txtObjetivo.text = "Buscar uma tábua para o trabalhador que está arrumando o trilho.";
+        txtObjetivo.text = "Leve três tábuas para seu colega de trabalho.";
         Invoke("TeleportPlayer_phase2", 2f);
         phase2.SetActive(true);
         UI_tutorial_andar.SetActive(false);
@@ -64,6 +65,8 @@ public class TutorialController : MonoBehaviour
 
     void TeleportPlayer_phase2()
     {
+        Invoke("AtivaObj", 6f);
+        Invoke("DesativaObj", 15f);
         controller.enabled = false;
         controller.transform.position = new Vector3(-103f, 1.08f, -8.5f); //Teleporta o jogador
         //player.transform.position = new Vector3(-103f, 1.08f, -8.5f);
@@ -92,6 +95,8 @@ public class TutorialController : MonoBehaviour
 
     void ActualPhase3()
     {
+        Invoke("AtivaObj", 7f);
+        Invoke("DesativaObj", 20f);
         phase2.SetActive(false);
         phase3.SetActive(true);
         //sky.Cycle.Hour = 17.18f;
@@ -165,6 +170,15 @@ public class TutorialController : MonoBehaviour
     void NextScene()
     {
         SceneManager.LoadScene("LoadingScreenAto1");
+    }
+
+    public void DesativaObj()
+    {
+        obj.SetActive(false);
+    }
+    public void AtivaObj()
+    {
+        obj.SetActive(true);
     }
 
 }

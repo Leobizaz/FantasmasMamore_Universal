@@ -23,7 +23,7 @@ public class FPSControlTutorial : MonoBehaviour {
 
     public float gravity = 100.0f;
 
-    public GameObject Fase3;
+    private bool faseTres = false;
 
     // Use this for initialization
     void Start () {
@@ -31,7 +31,6 @@ public class FPSControlTutorial : MonoBehaviour {
         rb = this.GetComponent<Rigidbody>();
         speedfactor = 1;
         lastCoroutine = null;
-        Fase3.SetActive(false);
 	}
 
 
@@ -40,6 +39,11 @@ public class FPSControlTutorial : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if(TabuasTutorial.index == 3)
+        {
+            faseTres = true;
+        }
+
         sensitivity = VolumeBrightness.Saved_sensibilidade;
 
         ForwardBack = Input.GetAxis("Vertical") * speed;
@@ -65,20 +69,28 @@ public class FPSControlTutorial : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.LeftShift) && horizontalSpeed > 1 )
         {
+            if(faseTres == false)
             Run();
             //StopCoroutine(lastCoroutine);
         }
         if (Input.GetKeyUp(KeyCode.LeftShift) || horizontalSpeed < 1 )
         {
-
-            CameraRun.speed = 0f;
-            lastCoroutine = StartCoroutine("Stoprun");
+            if (faseTres == false)
+            {
+                CameraRun.speed = 0f;
+                lastCoroutine = StartCoroutine("Stoprun");
+            }
         }
-     //   if(Fase3 == true)
-      //  {
-     //       speed = 3;
-    //        CameraRunTutorial.speed = Mathf.Round(1 * 6);
-    //    }
+       if(faseTres == true && horizontalSpeed > 1.5)
+        {
+           speed = 2.5f;
+            CameraRunTutorial.speed = Mathf.Round(1 * 6);
+        }
+        if (faseTres == true && horizontalSpeed < 1)
+        {
+            speed = 2.5f;
+            CameraRunTutorial.speed = Mathf.Round(1 * 2);
+        }
     }
 
     public void Run()
