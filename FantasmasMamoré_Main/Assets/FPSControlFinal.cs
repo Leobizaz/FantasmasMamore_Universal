@@ -30,6 +30,7 @@ public class FPSControlFinal : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         player = this.GetComponent<CharacterController>();
         rb = this.GetComponent<Rigidbody>();
         //anim = this.GetComponent<Animator>();

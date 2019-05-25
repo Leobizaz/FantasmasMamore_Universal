@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: 4a0bad30d4bb38c48a4de28d4057dc86
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: "Ma\xE7aneta"
+    100004: "Ma\xE7aneta 1"
+    100006: MetalPorta
+    100008: MetalPorta 1
+    100010: MetalPorta 2
+    100012: MetalPorta 3
+    100014: Porta_Bilheteria_1
+    100016: Porta_Bilheteria_2
+    100018: PortaMeio1
+    100020: PortaMeio2
+    100022: Portas1
+    100024: PortDir1
+    100026: PortDir2
+    100028: PortEsq1
+    100030: PortEsq2
+    100032: "Suporte_Tr\xE1s2"
+    100034: Vidro3
+    100036: Vidro4
+    400000: //RootNode
+    400002: "Ma\xE7aneta"
+    400004: "Ma\xE7aneta 1"
+    400006: MetalPorta
+    400008: MetalPorta 1
+    400010: MetalPorta 2
+    400012: MetalPorta 3
+    400014: Porta_Bilheteria_1
+    400016: Porta_Bilheteria_2
+    400018: PortaMeio1
+    400020: PortaMeio2
+    400022: Portas1
+    400024: PortDir1
+    400026: PortDir2
+    400028: PortEsq1
+    400030: PortEsq2
+    400032: "Suporte_Tr\xE1s2"
+    400034: Vidro3
+    400036: Vidro4
+    2100000: TXT_MadeiraEscura
+    2100002: TXT_Metal
+    2100004: TXT_Vidro
+    2100006: TXT_Madeira
+    2100008: TXT_Bilheteria
+    2100010: PreTo
+    2100012: TXT_Paredes
+    2100014: TXT_Teto
+    2100016: lambert1
+    2300000: "Ma\xE7aneta"
+    2300002: "Ma\xE7aneta 1"
+    2300004: MetalPorta
+    2300006: MetalPorta 1
+    2300008: MetalPorta 2
+    2300010: MetalPorta 3
+    2300012: Porta_Bilheteria_1
+    2300014: Porta_Bilheteria_2
+    2300016: PortaMeio1
+    2300018: PortaMeio2
+    2300020: PortDir1
+    2300022: PortDir2
+    2300024: PortEsq1
+    2300026: PortEsq2
+    2300028: "Suporte_Tr\xE1s2"
+    2300030: Vidro3
+    2300032: Vidro4
+    3300000: "Ma\xE7aneta"
+    3300002: "Ma\xE7aneta 1"
+    3300004: MetalPorta
+    3300006: MetalPorta 1
+    3300008: MetalPorta 2
+    3300010: MetalPorta 3
+    3300012: Porta_Bilheteria_1
+    3300014: Porta_Bilheteria_2
+    3300016: PortaMeio1
+    3300018: PortaMeio2
+    3300020: PortDir1
+    3300022: PortDir2
+    3300024: PortEsq1
+    3300026: PortEsq2
+    3300028: "Suporte_Tr\xE1s2"
+    3300030: Vidro3
+    3300032: Vidro4
+    4300000: PortDir1
+    4300002: MetalPorta
+    4300004: PortDir2
+    4300006: MetalPorta
+    4300008: PortEsq1
+    4300010: MetalPorta
+    4300012: PortEsq2
+    4300014: MetalPorta
+    4300016: PortaMeio1
+    4300018: "Ma\xE7aneta"
+    4300020: PortaMeio2
+    4300022: "Ma\xE7aneta"
+    4300024: Porta_Bilheteria_1
+    4300026: Vidro3
+    4300028: Porta_Bilheteria_2
+    4300030: Vidro4
+    4300032: "Suporte_Tr\xE1s2"
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TXT_Bilheteria
+    second: {fileID: 2100000, guid: bbba5c59d7abf0e4296117f39ed928a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TXT_Madeira
+    second: {fileID: 2100000, guid: 512f343ce3e95cb49b758befdbae8825, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TXT_MadeiraEscura
+    second: {fileID: 2100000, guid: 82424baddfec41e44a91b352dfe7109d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TXT_Metal
+    second: {fileID: 2100000, guid: c94f8d8d537328743ba033bef87add4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TXT_Paredes
+    second: {fileID: 2100000, guid: 80798516e9ca28940b22225fe9ccca50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TXT_Teto
+    second: {fileID: 2100000, guid: fec8dc8374ba62d4ba21b208b97e821b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TXT_Vidro
+    second: {fileID: 2100000, guid: 5064c1b982f0a7d4dbac474ce4f803be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 512f343ce3e95cb49b758befdbae8825, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 24
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
