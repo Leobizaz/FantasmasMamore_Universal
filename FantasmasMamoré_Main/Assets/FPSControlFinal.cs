@@ -8,7 +8,7 @@ public class FPSControlFinal : MonoBehaviour
     public GameObject eyes;
     private Rigidbody rb;
     Coroutine lastCoroutine;
-    public bool moveLock = true;
+    public bool moveLock = false;
 
     public static bool alive = true;
 
@@ -17,6 +17,7 @@ public class FPSControlFinal : MonoBehaviour
     float LeftRight;
     public float speedfactor;
     public float acceleration;
+    AudioSource audio;
 
     public float sensitivity;
     float camX;
@@ -27,12 +28,20 @@ public class FPSControlFinal : MonoBehaviour
 
     Animator anim;
 
+    private void Start()
+    {
+        player = this.GetComponent<CharacterController>();
+        rb = this.GetComponent<Rigidbody>();
+        //anim = this.GetComponent<Animator>();
+        speedfactor = 1;
+        lastCoroutine = null;
+        audio = GetComponent<AudioSource>();
+    }
+
     void FixedUpdate()
     {
         if (moveLock) CameraRun.speed = 0f;
 
-        if (!moveLock)
-        {
             ForwardBack = Input.GetAxis("Vertical") * speed;
             LeftRight = Input.GetAxis("Horizontal") * speed;
             Vector3 move = new Vector3(ForwardBack, 0, -LeftRight);
@@ -43,8 +52,7 @@ public class FPSControlFinal : MonoBehaviour
             camY -= Input.GetAxis("Mouse Y") * sensitivity;
 
             camY = Mathf.Clamp(camY, -90f, 90f);
-            if (!noMove)
-                player.Move(move * Time.deltaTime);
+            player.Move(move * Time.deltaTime);
             transform.Rotate(0, camX, 0);
             // eyes.transform.Rotate(0, 0, camY); // esse não travava a rotação Y
             eyes.transform.localRotation = Quaternion.Euler(0, 0, -camY);
@@ -65,7 +73,7 @@ public class FPSControlFinal : MonoBehaviour
                 CameraRun.speed = 0f;
                 lastCoroutine = StartCoroutine("Stoprun");
             }
-        }
+        
         if (alive == false)
         {
             CameraRun.speed = 0f;
@@ -90,7 +98,7 @@ public class FPSControlFinal : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
-            anim.SetInteger("State", 1);
+            //anim.SetInteger("State", 1);
             moveLock = true;
             alive = false;
         }
