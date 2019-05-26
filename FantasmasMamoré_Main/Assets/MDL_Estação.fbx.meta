@@ -22,6 +22,11 @@ ModelImporter:
     100032: "Suporte_Tr\xE1s2"
     100034: Vidro3
     100036: Vidro4
+    100038: Parede_5
+    100040: Pilar5
+    100042: Pilar6
+    100044: Pilar7
+    100046: Pilar8
     400000: //RootNode
     400002: "Ma\xE7aneta"
     400004: "Ma\xE7aneta 1"
@@ -41,6 +46,11 @@ ModelImporter:
     400032: "Suporte_Tr\xE1s2"
     400034: Vidro3
     400036: Vidro4
+    400038: Parede_5
+    400040: Pilar5
+    400042: Pilar6
+    400044: Pilar7
+    400046: Pilar8
     2100000: TXT_MadeiraEscura
     2100002: TXT_Metal
     2100004: TXT_Vidro
@@ -50,6 +60,8 @@ ModelImporter:
     2100012: TXT_Paredes
     2100014: TXT_Teto
     2100016: lambert1
+    2100018: "TXT_Ch\xE3o"
+    2100020: Default_Material
     2300000: "Ma\xE7aneta"
     2300002: "Ma\xE7aneta 1"
     2300004: MetalPorta
@@ -67,6 +79,11 @@ ModelImporter:
     2300028: "Suporte_Tr\xE1s2"
     2300030: Vidro3
     2300032: Vidro4
+    2300034: Parede_5
+    2300036: Pilar5
+    2300038: Pilar6
+    2300040: Pilar7
+    2300042: Pilar8
     3300000: "Ma\xE7aneta"
     3300002: "Ma\xE7aneta 1"
     3300004: MetalPorta
@@ -84,6 +101,11 @@ ModelImporter:
     3300028: "Suporte_Tr\xE1s2"
     3300030: Vidro3
     3300032: Vidro4
+    3300034: Parede_5
+    3300036: Pilar5
+    3300038: Pilar6
+    3300040: Pilar7
+    3300042: Pilar8
     4300000: PortDir1
     4300002: MetalPorta
     4300004: PortDir2
@@ -101,12 +123,22 @@ ModelImporter:
     4300028: Porta_Bilheteria_2
     4300030: Vidro4
     4300032: "Suporte_Tr\xE1s2"
+    4300034: Parede_5
+    4300036: Pilar8
+    4300038: Pilar7
+    4300040: Pilar6
+    4300042: Pilar5
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: TXT_Bilheteria
     second: {fileID: 2100000, guid: bbba5c59d7abf0e4296117f39ed928a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "TXT_Ch\xE3o"
+    second: {fileID: 2100000, guid: bc3a910d4d327e34d84a1e5bb9584d74, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

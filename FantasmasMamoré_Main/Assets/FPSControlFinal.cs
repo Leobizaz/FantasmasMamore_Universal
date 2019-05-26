@@ -33,7 +33,7 @@ public class FPSControlFinal : MonoBehaviour
         Time.timeScale = 1;
         player = this.GetComponent<CharacterController>();
         rb = this.GetComponent<Rigidbody>();
-        //anim = this.GetComponent<Animator>();
+        anim = this.GetComponent<Animator>();
         speedfactor = 1;
         lastCoroutine = null;
         audio = GetComponent<AudioSource>();
@@ -99,7 +99,7 @@ public class FPSControlFinal : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
-            //anim.SetInteger("State", 1);
+            anim.SetInteger("State", 1);
             moveLock = true;
             alive = false;
         }
