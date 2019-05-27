@@ -22,6 +22,7 @@ public class FPSControl : MonoBehaviour {
     public GameObject enemies;
     public TOD_Sky sky;
     public GameObject lampada;
+    public GameObject aimdsnao;
     public GameObject falaRespawn;
     public Animator fadeOut;
     bool ledge;
@@ -399,6 +400,11 @@ public class FPSControl : MonoBehaviour {
     public void VilaoAnimation()
     {
         vilao.transform.GetComponentInChildren<Animator>().Play("charge");
+    }
+
+    public void AiMeuDeusNao()
+    {
+        aimdsnao.SetActive(true);
     }
 
     public void FadeOut()

@@ -29,6 +29,8 @@ public class ControleTempoGalpao : MonoBehaviour
 
     public GameObject chicoF;
 
+    public GameObject dialogo_merda;
+
     public static float time;
     public ObjetivoGlobal objetivo;
 
@@ -97,6 +99,7 @@ public class ControleTempoGalpao : MonoBehaviour
 
     public void StartEvent()
     {
+        dialogo_merda.SetActive(true);
         Invoke("EnableDialogos", 6f);
         SpawnInimigo.SetActive(true);
         Spawn = true;

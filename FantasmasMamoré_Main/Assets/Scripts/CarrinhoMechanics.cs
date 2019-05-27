@@ -10,6 +10,7 @@ public class CarrinhoMechanics : MonoBehaviour
     private bool played;
     private bool fallOff;
     private Animator anim;
+    public GameObject sóempurrar;
     private float velocity = 0.5f;
     [SerializeField] float currentSpeed;
 
@@ -27,6 +28,7 @@ public class CarrinhoMechanics : MonoBehaviour
             ObjetivoGlobal.Objetivo = "Preciso empurrar o carrinho até o trilho e subir.";
             anim.Rebind();
             anim.Play("TrolleyPrepare");
+            sóempurrar.SetActive(true);
         }
 
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("TrolleyReady"))

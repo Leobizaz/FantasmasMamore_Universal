@@ -4,7 +4,25 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Escada
+    100004: "Ma\xE7aneta"
+    100006: "Ma\xE7aneta_1"
+    100008: "Ma\xE7aneta_2"
+    100010: P2_P
+    100012: P2_P1
+    100014: Porta2
+    100016: Porta_3
+    100018: "Vag\xE3o"
     400000: //RootNode
+    400002: Escada
+    400004: "Ma\xE7aneta"
+    400006: "Ma\xE7aneta_1"
+    400008: "Ma\xE7aneta_2"
+    400010: P2_P
+    400012: P2_P1
+    400014: Porta2
+    400016: Porta_3
+    400018: "Vag\xE3o"
     2100000: TXT_Container
     2100002: lambert1
     2100004: TXT_Treco
@@ -20,10 +38,38 @@ ModelImporter:
     2100024: TXT_Metal3
     2100026: TXT_Rodas1
     2100028: TXT_Metal4
+    2100030: Default_Material
+    2100032: TXT_Teto
     2300000: //RootNode
+    2300002: Escada
+    2300004: "Ma\xE7aneta"
+    2300006: "Ma\xE7aneta_1"
+    2300008: "Ma\xE7aneta_2"
+    2300010: P2_P
+    2300012: P2_P1
+    2300014: "Vag\xE3o"
     3300000: //RootNode
+    3300002: Escada
+    3300004: "Ma\xE7aneta"
+    3300006: "Ma\xE7aneta_1"
+    3300008: "Ma\xE7aneta_2"
+    3300010: P2_P
+    3300012: P2_P1
+    3300014: "Vag\xE3o"
     4300000: P2_C1
+    4300002: Escada
+    4300004: P2_P
+    4300006: "Ma\xE7aneta_1"
+    4300008: "Ma\xE7aneta"
+    4300010: P2_P1
+    4300012: "Ma\xE7aneta_2"
+    4300014: "Vag\xE3o"
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default_Material
+    second: {fileID: 2100000, guid: da576bf5b1a8faf45a09a3520620ed63, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -64,6 +110,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: TXT_Rodas1
     second: {fileID: 2100000, guid: 723f9942dce0676459cf0611dfe6812c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TXT_Teto
+    second: {fileID: 2100000, guid: d1e8663c19eb52640b5047a76240a534, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
