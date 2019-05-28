@@ -27,6 +27,166 @@ ModelImporter:
     100042: Pilar6
     100044: Pilar7
     100046: Pilar8
+    100048: "Ma\xE7aneta1"
+    100050: MetalPorta1
+    100052: MetalPorta1 1
+    100054: Porta_Bilheteria
+    100056: Porta_Meio
+    100058: Portas_Dir
+    100060: Portas_Esq
+    100062: PortEsq1 1
+    100064: PortEsq2 1
+    100066: VidroB1
+    100068: VidroB2
+    100070: Bilheteria
+    100072: Bilheteria 1
+    100074: Caixinha
+    100076: Caixinha 1
+    100078: Caixinha 2
+    100080: Caixinha 3
+    100082: Caixinha 4
+    100084: Caixinha1
+    100086: Caixinha2
+    100088: Caixinha3
+    100090: "Ch\xE3o"
+    100092: Janela
+    100094: Janela 1
+    100096: Janela1
+    100098: Janela2
+    100100: Janela2 1
+    100102: Janela2 2
+    100104: Janela3
+    100106: Janela3 1
+    100108: Janela3 2
+    100110: Janela4
+    100112: Janela4 1
+    100114: Janela4 2
+    100116: Parede_1
+    100118: Parede_2
+    100120: Parede_2 1
+    100122: Parede_3
+    100124: Parede_3 1
+    100126: Parede_3 2
+    100128: pCube6
+    100130: pCube6 1
+    100132: pCube6 10
+    100134: pCube6 11
+    100136: pCube6 2
+    100138: pCube6 3
+    100140: pCube6 4
+    100142: pCube6 5
+    100144: pCube6 6
+    100146: pCube6 7
+    100148: pCube6 8
+    100150: pCube6 9
+    100152: pCylinder1
+    100154: pCylinder1 1
+    100156: pCylinder1 2
+    100158: pCylinder1 3
+    100160: pCylinder10
+    100162: pCylinder10 1
+    100164: pCylinder10 2
+    100166: pCylinder10 3
+    100168: pCylinder11
+    100170: pCylinder11 1
+    100172: pCylinder11 2
+    100174: pCylinder11 3
+    100176: pCylinder12
+    100178: pCylinder12 1
+    100180: pCylinder12 2
+    100182: pCylinder12 3
+    100184: pCylinder13
+    100186: pCylinder13 1
+    100188: pCylinder13 2
+    100190: pCylinder13 3
+    100192: pCylinder14
+    100194: pCylinder14 1
+    100196: pCylinder14 2
+    100198: pCylinder14 3
+    100200: pCylinder15
+    100202: pCylinder15 1
+    100204: pCylinder15 2
+    100206: pCylinder15 3
+    100208: pCylinder16
+    100210: pCylinder16 1
+    100212: pCylinder16 2
+    100214: pCylinder16 3
+    100216: pCylinder2
+    100218: pCylinder2 1
+    100220: pCylinder2 2
+    100222: pCylinder2 3
+    100224: pCylinder3
+    100226: pCylinder3 1
+    100228: pCylinder3 2
+    100230: pCylinder3 3
+    100232: pCylinder4
+    100234: pCylinder4 1
+    100236: pCylinder4 2
+    100238: pCylinder4 3
+    100240: pCylinder5
+    100242: pCylinder5 1
+    100244: pCylinder5 2
+    100246: pCylinder5 3
+    100248: pCylinder6
+    100250: pCylinder6 1
+    100252: pCylinder6 2
+    100254: pCylinder6 3
+    100256: pCylinder7
+    100258: pCylinder7 1
+    100260: pCylinder7 2
+    100262: pCylinder7 3
+    100264: pCylinder8
+    100266: pCylinder8 1
+    100268: pCylinder8 2
+    100270: pCylinder8 3
+    100272: pCylinder9
+    100274: pCylinder9 1
+    100276: pCylinder9 2
+    100278: pCylinder9 3
+    100280: Pilar_1
+    100282: Pilar_2
+    100284: Porta_Bilheteria_3
+    100286: Portas
+    100288: Suporte_Frente
+    100290: "Suporte_Tr\xE1s"
+    100292: "Suporte_Tr\xE1s10"
+    100294: "Suporte_Tr\xE1s11"
+    100296: "Suporte_Tr\xE1s12"
+    100298: "Suporte_Tr\xE1s13"
+    100300: "Suporte_Tr\xE1s3"
+    100302: "Suporte_Tr\xE1s4"
+    100304: "Suporte_Tr\xE1s5"
+    100306: "Suporte_Tr\xE1s6"
+    100308: "Suporte_Tr\xE1s7"
+    100310: "Suporte_Tr\xE1s8"
+    100312: "Suporte_Tr\xE1s9"
+    100314: Teto2
+    100316: Vidro
+    100318: Vidro1
+    100320: Vidro1 1
+    100322: Vidro1 10
+    100324: Vidro1 11
+    100326: Vidro1 2
+    100328: Vidro1 3
+    100330: Vidro1 4
+    100332: Vidro1 5
+    100334: Vidro1 6
+    100336: Vidro1 7
+    100338: Vidro1 8
+    100340: Vidro1 9
+    100342: Vidro2
+    100344: Vidro2 1
+    100346: Vidro2 10
+    100348: Vidro2 11
+    100350: Vidro2 2
+    100352: Vidro2 3
+    100354: Vidro2 4
+    100356: Vidro2 5
+    100358: Vidro2 6
+    100360: Vidro2 7
+    100362: Vidro2 8
+    100364: Vidro2 9
+    100366: VidroB3
     400000: //RootNode
     400002: "Ma\xE7aneta"
     400004: "Ma\xE7aneta 1"
@@ -51,6 +211,166 @@ ModelImporter:
     400042: Pilar6
     400044: Pilar7
     400046: Pilar8
+    400048: "Ma\xE7aneta1"
+    400050: MetalPorta1
+    400052: MetalPorta1 1
+    400054: Porta_Bilheteria
+    400056: Porta_Meio
+    400058: Portas_Dir
+    400060: Portas_Esq
+    400062: PortEsq1 1
+    400064: PortEsq2 1
+    400066: VidroB1
+    400068: VidroB2
+    400070: Bilheteria
+    400072: Bilheteria 1
+    400074: Caixinha
+    400076: Caixinha 1
+    400078: Caixinha 2
+    400080: Caixinha 3
+    400082: Caixinha 4
+    400084: Caixinha1
+    400086: Caixinha2
+    400088: Caixinha3
+    400090: "Ch\xE3o"
+    400092: Janela
+    400094: Janela 1
+    400096: Janela1
+    400098: Janela2
+    400100: Janela2 1
+    400102: Janela2 2
+    400104: Janela3
+    400106: Janela3 1
+    400108: Janela3 2
+    400110: Janela4
+    400112: Janela4 1
+    400114: Janela4 2
+    400116: Parede_1
+    400118: Parede_2
+    400120: Parede_2 1
+    400122: Parede_3
+    400124: Parede_3 1
+    400126: Parede_3 2
+    400128: pCube6
+    400130: pCube6 1
+    400132: pCube6 10
+    400134: pCube6 11
+    400136: pCube6 2
+    400138: pCube6 3
+    400140: pCube6 4
+    400142: pCube6 5
+    400144: pCube6 6
+    400146: pCube6 7
+    400148: pCube6 8
+    400150: pCube6 9
+    400152: pCylinder1
+    400154: pCylinder1 1
+    400156: pCylinder1 2
+    400158: pCylinder1 3
+    400160: pCylinder10
+    400162: pCylinder10 1
+    400164: pCylinder10 2
+    400166: pCylinder10 3
+    400168: pCylinder11
+    400170: pCylinder11 1
+    400172: pCylinder11 2
+    400174: pCylinder11 3
+    400176: pCylinder12
+    400178: pCylinder12 1
+    400180: pCylinder12 2
+    400182: pCylinder12 3
+    400184: pCylinder13
+    400186: pCylinder13 1
+    400188: pCylinder13 2
+    400190: pCylinder13 3
+    400192: pCylinder14
+    400194: pCylinder14 1
+    400196: pCylinder14 2
+    400198: pCylinder14 3
+    400200: pCylinder15
+    400202: pCylinder15 1
+    400204: pCylinder15 2
+    400206: pCylinder15 3
+    400208: pCylinder16
+    400210: pCylinder16 1
+    400212: pCylinder16 2
+    400214: pCylinder16 3
+    400216: pCylinder2
+    400218: pCylinder2 1
+    400220: pCylinder2 2
+    400222: pCylinder2 3
+    400224: pCylinder3
+    400226: pCylinder3 1
+    400228: pCylinder3 2
+    400230: pCylinder3 3
+    400232: pCylinder4
+    400234: pCylinder4 1
+    400236: pCylinder4 2
+    400238: pCylinder4 3
+    400240: pCylinder5
+    400242: pCylinder5 1
+    400244: pCylinder5 2
+    400246: pCylinder5 3
+    400248: pCylinder6
+    400250: pCylinder6 1
+    400252: pCylinder6 2
+    400254: pCylinder6 3
+    400256: pCylinder7
+    400258: pCylinder7 1
+    400260: pCylinder7 2
+    400262: pCylinder7 3
+    400264: pCylinder8
+    400266: pCylinder8 1
+    400268: pCylinder8 2
+    400270: pCylinder8 3
+    400272: pCylinder9
+    400274: pCylinder9 1
+    400276: pCylinder9 2
+    400278: pCylinder9 3
+    400280: Pilar_1
+    400282: Pilar_2
+    400284: Porta_Bilheteria_3
+    400286: Portas
+    400288: Suporte_Frente
+    400290: "Suporte_Tr\xE1s"
+    400292: "Suporte_Tr\xE1s10"
+    400294: "Suporte_Tr\xE1s11"
+    400296: "Suporte_Tr\xE1s12"
+    400298: "Suporte_Tr\xE1s13"
+    400300: "Suporte_Tr\xE1s3"
+    400302: "Suporte_Tr\xE1s4"
+    400304: "Suporte_Tr\xE1s5"
+    400306: "Suporte_Tr\xE1s6"
+    400308: "Suporte_Tr\xE1s7"
+    400310: "Suporte_Tr\xE1s8"
+    400312: "Suporte_Tr\xE1s9"
+    400314: Teto2
+    400316: Vidro
+    400318: Vidro1
+    400320: Vidro1 1
+    400322: Vidro1 10
+    400324: Vidro1 11
+    400326: Vidro1 2
+    400328: Vidro1 3
+    400330: Vidro1 4
+    400332: Vidro1 5
+    400334: Vidro1 6
+    400336: Vidro1 7
+    400338: Vidro1 8
+    400340: Vidro1 9
+    400342: Vidro2
+    400344: Vidro2 1
+    400346: Vidro2 10
+    400348: Vidro2 11
+    400350: Vidro2 2
+    400352: Vidro2 3
+    400354: Vidro2 4
+    400356: Vidro2 5
+    400358: Vidro2 6
+    400360: Vidro2 7
+    400362: Vidro2 8
+    400364: Vidro2 9
+    400366: VidroB3
     2100000: TXT_MadeiraEscura
     2100002: TXT_Metal
     2100004: TXT_Vidro
@@ -84,6 +404,140 @@ ModelImporter:
     2300038: Pilar6
     2300040: Pilar7
     2300042: Pilar8
+    2300044: "Ma\xE7aneta1"
+    2300046: MetalPorta1
+    2300048: MetalPorta1 1
+    2300050: PortEsq1 1
+    2300052: PortEsq2 1
+    2300054: VidroB1
+    2300056: VidroB2
+    2300058: Bilheteria 1
+    2300060: Caixinha 1
+    2300062: Caixinha 2
+    2300064: Caixinha 3
+    2300066: Caixinha 4
+    2300068: "Ch\xE3o"
+    2300070: Parede_1
+    2300072: Parede_2 1
+    2300074: Parede_3 1
+    2300076: Parede_3 2
+    2300078: pCube6
+    2300080: pCube6 1
+    2300082: pCube6 10
+    2300084: pCube6 11
+    2300086: pCube6 2
+    2300088: pCube6 3
+    2300090: pCube6 4
+    2300092: pCube6 5
+    2300094: pCube6 6
+    2300096: pCube6 7
+    2300098: pCube6 8
+    2300100: pCube6 9
+    2300102: pCylinder1
+    2300104: pCylinder1 1
+    2300106: pCylinder1 2
+    2300108: pCylinder1 3
+    2300110: pCylinder10
+    2300112: pCylinder10 1
+    2300114: pCylinder10 2
+    2300116: pCylinder10 3
+    2300118: pCylinder11
+    2300120: pCylinder11 1
+    2300122: pCylinder11 2
+    2300124: pCylinder11 3
+    2300126: pCylinder12
+    2300128: pCylinder12 1
+    2300130: pCylinder12 2
+    2300132: pCylinder12 3
+    2300134: pCylinder13
+    2300136: pCylinder13 1
+    2300138: pCylinder13 2
+    2300140: pCylinder13 3
+    2300142: pCylinder14
+    2300144: pCylinder14 1
+    2300146: pCylinder14 2
+    2300148: pCylinder14 3
+    2300150: pCylinder15
+    2300152: pCylinder15 1
+    2300154: pCylinder15 2
+    2300156: pCylinder15 3
+    2300158: pCylinder16
+    2300160: pCylinder16 1
+    2300162: pCylinder16 2
+    2300164: pCylinder16 3
+    2300166: pCylinder2
+    2300168: pCylinder2 1
+    2300170: pCylinder2 2
+    2300172: pCylinder2 3
+    2300174: pCylinder3
+    2300176: pCylinder3 1
+    2300178: pCylinder3 2
+    2300180: pCylinder3 3
+    2300182: pCylinder4
+    2300184: pCylinder4 1
+    2300186: pCylinder4 2
+    2300188: pCylinder4 3
+    2300190: pCylinder5
+    2300192: pCylinder5 1
+    2300194: pCylinder5 2
+    2300196: pCylinder5 3
+    2300198: pCylinder6
+    2300200: pCylinder6 1
+    2300202: pCylinder6 2
+    2300204: pCylinder6 3
+    2300206: pCylinder7
+    2300208: pCylinder7 1
+    2300210: pCylinder7 2
+    2300212: pCylinder7 3
+    2300214: pCylinder8
+    2300216: pCylinder8 1
+    2300218: pCylinder8 2
+    2300220: pCylinder8 3
+    2300222: pCylinder9
+    2300224: pCylinder9 1
+    2300226: pCylinder9 2
+    2300228: pCylinder9 3
+    2300230: Pilar_1
+    2300232: Pilar_2
+    2300234: Porta_Bilheteria_3
+    2300236: "Suporte_Tr\xE1s10"
+    2300238: "Suporte_Tr\xE1s11"
+    2300240: "Suporte_Tr\xE1s12"
+    2300242: "Suporte_Tr\xE1s13"
+    2300244: "Suporte_Tr\xE1s3"
+    2300246: "Suporte_Tr\xE1s4"
+    2300248: "Suporte_Tr\xE1s5"
+    2300250: "Suporte_Tr\xE1s6"
+    2300252: "Suporte_Tr\xE1s7"
+    2300254: "Suporte_Tr\xE1s8"
+    2300256: "Suporte_Tr\xE1s9"
+    2300258: Teto2
+    2300260: Vidro
+    2300262: Vidro1
+    2300264: Vidro1 1
+    2300266: Vidro1 10
+    2300268: Vidro1 11
+    2300270: Vidro1 2
+    2300272: Vidro1 3
+    2300274: Vidro1 4
+    2300276: Vidro1 5
+    2300278: Vidro1 6
+    2300280: Vidro1 7
+    2300282: Vidro1 8
+    2300284: Vidro1 9
+    2300286: Vidro2
+    2300288: Vidro2 1
+    2300290: Vidro2 10
+    2300292: Vidro2 11
+    2300294: Vidro2 2
+    2300296: Vidro2 3
+    2300298: Vidro2 4
+    2300300: Vidro2 5
+    2300302: Vidro2 6
+    2300304: Vidro2 7
+    2300306: Vidro2 8
+    2300308: Vidro2 9
+    2300310: VidroB3
     3300000: "Ma\xE7aneta"
     3300002: "Ma\xE7aneta 1"
     3300004: MetalPorta
@@ -106,6 +560,140 @@ ModelImporter:
     3300038: Pilar6
     3300040: Pilar7
     3300042: Pilar8
+    3300044: "Ma\xE7aneta1"
+    3300046: MetalPorta1
+    3300048: MetalPorta1 1
+    3300050: PortEsq1 1
+    3300052: PortEsq2 1
+    3300054: VidroB1
+    3300056: VidroB2
+    3300058: Bilheteria 1
+    3300060: Caixinha 1
+    3300062: Caixinha 2
+    3300064: Caixinha 3
+    3300066: Caixinha 4
+    3300068: "Ch\xE3o"
+    3300070: Parede_1
+    3300072: Parede_2 1
+    3300074: Parede_3 1
+    3300076: Parede_3 2
+    3300078: pCube6
+    3300080: pCube6 1
+    3300082: pCube6 10
+    3300084: pCube6 11
+    3300086: pCube6 2
+    3300088: pCube6 3
+    3300090: pCube6 4
+    3300092: pCube6 5
+    3300094: pCube6 6
+    3300096: pCube6 7
+    3300098: pCube6 8
+    3300100: pCube6 9
+    3300102: pCylinder1
+    3300104: pCylinder1 1
+    3300106: pCylinder1 2
+    3300108: pCylinder1 3
+    3300110: pCylinder10
+    3300112: pCylinder10 1
+    3300114: pCylinder10 2
+    3300116: pCylinder10 3
+    3300118: pCylinder11
+    3300120: pCylinder11 1
+    3300122: pCylinder11 2
+    3300124: pCylinder11 3
+    3300126: pCylinder12
+    3300128: pCylinder12 1
+    3300130: pCylinder12 2
+    3300132: pCylinder12 3
+    3300134: pCylinder13
+    3300136: pCylinder13 1
+    3300138: pCylinder13 2
+    3300140: pCylinder13 3
+    3300142: pCylinder14
+    3300144: pCylinder14 1
+    3300146: pCylinder14 2
+    3300148: pCylinder14 3
+    3300150: pCylinder15
+    3300152: pCylinder15 1
+    3300154: pCylinder15 2
+    3300156: pCylinder15 3
+    3300158: pCylinder16
+    3300160: pCylinder16 1
+    3300162: pCylinder16 2
+    3300164: pCylinder16 3
+    3300166: pCylinder2
+    3300168: pCylinder2 1
+    3300170: pCylinder2 2
+    3300172: pCylinder2 3
+    3300174: pCylinder3
+    3300176: pCylinder3 1
+    3300178: pCylinder3 2
+    3300180: pCylinder3 3
+    3300182: pCylinder4
+    3300184: pCylinder4 1
+    3300186: pCylinder4 2
+    3300188: pCylinder4 3
+    3300190: pCylinder5
+    3300192: pCylinder5 1
+    3300194: pCylinder5 2
+    3300196: pCylinder5 3
+    3300198: pCylinder6
+    3300200: pCylinder6 1
+    3300202: pCylinder6 2
+    3300204: pCylinder6 3
+    3300206: pCylinder7
+    3300208: pCylinder7 1
+    3300210: pCylinder7 2
+    3300212: pCylinder7 3
+    3300214: pCylinder8
+    3300216: pCylinder8 1
+    3300218: pCylinder8 2
+    3300220: pCylinder8 3
+    3300222: pCylinder9
+    3300224: pCylinder9 1
+    3300226: pCylinder9 2
+    3300228: pCylinder9 3
+    3300230: Pilar_1
+    3300232: Pilar_2
+    3300234: Porta_Bilheteria_3
+    3300236: "Suporte_Tr\xE1s10"
+    3300238: "Suporte_Tr\xE1s11"
+    3300240: "Suporte_Tr\xE1s12"
+    3300242: "Suporte_Tr\xE1s13"
+    3300244: "Suporte_Tr\xE1s3"
+    3300246: "Suporte_Tr\xE1s4"
+    3300248: "Suporte_Tr\xE1s5"
+    3300250: "Suporte_Tr\xE1s6"
+    3300252: "Suporte_Tr\xE1s7"
+    3300254: "Suporte_Tr\xE1s8"
+    3300256: "Suporte_Tr\xE1s9"
+    3300258: Teto2
+    3300260: Vidro
+    3300262: Vidro1
+    3300264: Vidro1 1
+    3300266: Vidro1 10
+    3300268: Vidro1 11
+    3300270: Vidro1 2
+    3300272: Vidro1 3
+    3300274: Vidro1 4
+    3300276: Vidro1 5
+    3300278: Vidro1 6
+    3300280: Vidro1 7
+    3300282: Vidro1 8
+    3300284: Vidro1 9
+    3300286: Vidro2
+    3300288: Vidro2 1
+    3300290: Vidro2 10
+    3300292: Vidro2 11
+    3300294: Vidro2 2
+    3300296: Vidro2 3
+    3300298: Vidro2 4
+    3300300: Vidro2 5
+    3300302: Vidro2 6
+    3300304: Vidro2 7
+    3300306: Vidro2 8
+    3300308: Vidro2 9
+    3300310: VidroB3
     4300000: PortDir1
     4300002: MetalPorta
     4300004: PortDir2
@@ -128,6 +716,140 @@ ModelImporter:
     4300038: Pilar7
     4300040: Pilar6
     4300042: Pilar5
+    4300044: MetalPorta1
+    4300046: MetalPorta1
+    4300048: PortEsq1
+    4300050: PortEsq2
+    4300052: "Ma\xE7aneta1"
+    4300054: VidroB2
+    4300056: VidroB1
+    4300058: "Suporte_Tr\xE1s10"
+    4300060: "Suporte_Tr\xE1s7"
+    4300062: "Suporte_Tr\xE1s8"
+    4300064: "Suporte_Tr\xE1s9"
+    4300066: "Suporte_Tr\xE1s6"
+    4300068: "Suporte_Tr\xE1s11"
+    4300070: "Suporte_Tr\xE1s3"
+    4300072: "Suporte_Tr\xE1s4"
+    4300074: "Suporte_Tr\xE1s5"
+    4300076: "Suporte_Tr\xE1s12"
+    4300078: "Suporte_Tr\xE1s13"
+    4300080: Pilar_2
+    4300082: Pilar_1
+    4300084: Caixinha
+    4300086: pCylinder1
+    4300088: pCylinder2
+    4300090: pCylinder3
+    4300092: pCylinder4
+    4300094: pCylinder5
+    4300096: pCylinder6
+    4300098: pCylinder7
+    4300100: pCylinder8
+    4300102: pCylinder9
+    4300104: pCylinder10
+    4300106: pCylinder11
+    4300108: pCylinder12
+    4300110: pCylinder13
+    4300112: pCylinder14
+    4300114: pCylinder15
+    4300116: pCylinder16
+    4300118: Caixinha
+    4300120: pCylinder1
+    4300122: pCylinder2
+    4300124: pCylinder3
+    4300126: pCylinder4
+    4300128: pCylinder5
+    4300130: pCylinder6
+    4300132: pCylinder7
+    4300134: pCylinder8
+    4300136: pCylinder9
+    4300138: pCylinder10
+    4300140: pCylinder11
+    4300142: pCylinder12
+    4300144: pCylinder13
+    4300146: pCylinder14
+    4300148: pCylinder15
+    4300150: pCylinder16
+    4300152: Caixinha
+    4300154: pCylinder1
+    4300156: pCylinder2
+    4300158: pCylinder3
+    4300160: pCylinder4
+    4300162: pCylinder5
+    4300164: pCylinder6
+    4300166: pCylinder7
+    4300168: pCylinder8
+    4300170: pCylinder9
+    4300172: pCylinder10
+    4300174: pCylinder11
+    4300176: pCylinder12
+    4300178: pCylinder13
+    4300180: pCylinder14
+    4300182: pCylinder15
+    4300184: pCylinder16
+    4300186: Caixinha
+    4300188: pCylinder1
+    4300190: pCylinder2
+    4300192: pCylinder3
+    4300194: pCylinder4
+    4300196: pCylinder5
+    4300198: pCylinder6
+    4300200: pCylinder7
+    4300202: pCylinder8
+    4300204: pCylinder9
+    4300206: pCylinder10
+    4300208: pCylinder11
+    4300210: pCylinder12
+    4300212: pCylinder13
+    4300214: pCylinder14
+    4300216: pCylinder15
+    4300218: pCylinder16
+    4300220: Vidro
+    4300222: Bilheteria
+    4300224: Parede_3
+    4300226: pCube6
+    4300228: Vidro2
+    4300230: Vidro1
+    4300232: pCube6
+    4300234: Vidro2
+    4300236: Vidro1
+    4300238: pCube6
+    4300240: Vidro2
+    4300242: Vidro1
+    4300244: pCube6
+    4300246: Vidro2
+    4300248: Vidro1
+    4300250: Parede_2
+    4300252: pCube6
+    4300254: Vidro2
+    4300256: Vidro1
+    4300258: pCube6
+    4300260: Vidro2
+    4300262: Vidro1
+    4300264: pCube6
+    4300266: Vidro2
+    4300268: Vidro1
+    4300270: pCube6
+    4300272: Vidro2
+    4300274: Vidro1
+    4300276: Parede_1
+    4300278: Teto2
+    4300280: "Ch\xE3o"
+    4300282: Porta_Bilheteria_3
+    4300284: VidroB3
+    4300286: Parede_3
+    4300288: pCube6
+    4300290: Vidro2
+    4300292: Vidro1
+    4300294: pCube6
+    4300296: Vidro2
+    4300298: Vidro1
+    4300300: pCube6
+    4300302: Vidro2
+    4300304: Vidro1
+    4300306: pCube6
+    4300308: Vidro2
+    4300310: Vidro1
   externalObjects:
   - first:
       type: UnityEngine:Material

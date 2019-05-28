@@ -12,7 +12,7 @@ public class AudioOnPickup : MonoBehaviour
     void Start()
     {
         audio = GetComponent<AudioSource>();
-        audiodialogo = GameObject.Find("Ato 3/Cenário/Triggers/Trigger_casa").GetComponent<AudioSource>();
+        audiodialogo = GameObject.Find("Trigger_casa").GetComponent<AudioSource>();
     }
 
     void Update()

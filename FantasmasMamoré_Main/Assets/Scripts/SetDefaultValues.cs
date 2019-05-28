@@ -9,6 +9,7 @@ public class SetDefaultValues : MonoBehaviour
     public GameObject intro;
     void Start()
     {
+        Time.timeScale = 1f;
         VolumeBrightness.Saved_brilho = 0.2f;
         VolumeBrightness.Saved_volumeMusica = 0.5f;
         VolumeBrightness.Saved_volumeVozes = 1f;

@@ -37,12 +37,17 @@ public class FPSControlFinal : MonoBehaviour
         speedfactor = 1;
         lastCoroutine = null;
         audio = GetComponent<AudioSource>();
+        //moveLock = true;
+        player.enabled = false;
+        Invoke("Disconnect", 6f);
     }
 
     void FixedUpdate()
     {
         if (moveLock) CameraRun.speed = 0f;
 
+        if (!moveLock)
+        {
             ForwardBack = Input.GetAxis("Vertical") * speed;
             LeftRight = Input.GetAxis("Horizontal") * speed;
             Vector3 move = new Vector3(ForwardBack, 0, -LeftRight);
@@ -74,6 +79,7 @@ public class FPSControlFinal : MonoBehaviour
                 CameraRun.speed = 0f;
                 lastCoroutine = StartCoroutine("Stoprun");
             }
+        }
         
         if (alive == false)
         {
@@ -103,6 +109,26 @@ public class FPSControlFinal : MonoBehaviour
             moveLock = true;
             alive = false;
         }
+
+    }
+
+    void TeleportPlayer(float Tx, float Ty, float Tz, float Rx, float Ry, float Rz)
+    {
+        player.enabled = false;
+        transform.localPosition = new Vector3(Tx, Ty, Tz);
+        transform.localRotation = Quaternion.Euler(Rx, Ry, Rz);
+        player.enabled = true;
+    }
+
+    public void Disconnect()
+    {
+        
+        transform.parent.gameObject.transform.SetParent(null, true);
+        //transform.parent.gameObject.transform.localPosition = Vector3.zero;
+        //transform.localPosition = Vector3.zero;
+        TeleportPlayer(4.52f, -1.54f, 3.79f, 0, 0, 0);
+
+        //moveLock = false;
 
     }
 }
