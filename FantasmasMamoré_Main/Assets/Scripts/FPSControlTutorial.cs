@@ -83,11 +83,13 @@ public class FPSControlTutorial : MonoBehaviour {
         }
        if(faseTres == true && horizontalSpeed > 1.5)
         {
-           speed = 2.5f;
+            CameraRun.speed = 0f;
+            speed = 2.5f;
             CameraRunTutorial.speed = Mathf.Round(1 * 6);
         }
         if (faseTres == true && horizontalSpeed < 1)
         {
+            CameraRun.speed = 0f;
             speed = 2.5f;
             CameraRunTutorial.speed = Mathf.Round(1 * 2);
         }
