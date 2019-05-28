@@ -12,6 +12,7 @@ public class ControleAtoFinal : MonoBehaviour
     public bool pause;
     public GameObject telaPause;
     public GameObject musica;
+    public GameObject Forcefield;
 
 
 
@@ -75,11 +76,18 @@ public class ControleAtoFinal : MonoBehaviour
 
     public void BeginChase()
     {
+        SpawnForceField();
         CancelInvoke("BeginChase");
         vilaoScript.StopDiscurso();
         vilaoAnimator.Play("gesture_agree");
         vilaoScript.TardeDemais();
         Invoke("Walcc", 9f);
+    }
+
+    public void SpawnForceField()
+    {
+        //add efeito aki
+        Forcefield.SetActive(true);
     }
 
     public void Walcc()
