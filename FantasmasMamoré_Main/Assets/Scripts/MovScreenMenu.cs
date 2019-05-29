@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MovScreenMenu : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class MovScreenMenu : MonoBehaviour
     public Animator Title;
     public Animator TransitionGame;
     public Transform target;
+    public Text jogar;
+    public GameObject Continuar;
 
     public GameObject music;
     public GameObject apito;
@@ -55,19 +58,49 @@ public class MovScreenMenu : MonoBehaviour
         Invoke("LoadAct1", 4f);
     }
 
-
+    public void Continue()
+    {
+        anim.SetInteger("State", 3);
+        Title.SetInteger("State", 1);
+        TransitionGame.SetInteger("State", 1);
+        target.transform.position = new Vector3(26.6f, 2.01f, 15.41f);
+        music.SetActive(false);
+        apito.SetActive(true);
+        if(Globals.playerProgress >= 1 && Globals.playerProgress < 5)
+            Invoke("LoadAct1Memo", 4f);
+        if(Globals.playerProgress == 5)
+            Invoke("LoadFim", 4f);
+    }
 
     // Start is called before the first frame update
     void Update()
     {
         transform.LookAt(target);
-
-
+        if(Globals.playerProgress > 0)
+        {
+            jogar.text = "       Novo Jogo";
+        }
+        if(Globals.playerProgress >= 1)
+        {
+            Continuar.SetActive(true);
+        }
     }
     public void LoadAct1()
     {
         ControleTempoGalpao.BomDia = false;
         SceneManager.LoadScene("LoadingScreenTutorial");
+        FPSControl.live = true;
+    }
+    public void LoadAct1Memo()
+    {
+        ControleTempoGalpao.BomDia = false;
+        SceneManager.LoadScene("LoadingScreenAto1");
+        FPSControl.live = true;
+    }
+    public void LoadFim()
+    {
+        ControleTempoGalpao.BomDia = false;
+        SceneManager.LoadScene("LoadingScreenAtoFinal");
         FPSControl.live = true;
     }
 }

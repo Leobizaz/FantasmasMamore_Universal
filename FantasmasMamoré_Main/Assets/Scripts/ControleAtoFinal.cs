@@ -10,6 +10,7 @@ public class ControleAtoFinal : MonoBehaviour
     private Animator vilaoAnimator;
     public Animator portaMeio;
     public GameObject player;
+    public GameObject DeathPanel;
     private FPSControlFinal playerScript;
     public bool pause;
     public GameObject telaPause;
@@ -35,6 +36,10 @@ public class ControleAtoFinal : MonoBehaviour
 
     private void Update()
     {
+        if (FPSControlFinal.alive == false)
+        {
+            Death();
+        }
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {
             if (Time.timeScale == 1)
@@ -167,5 +172,12 @@ public class ControleAtoFinal : MonoBehaviour
     {
         SceneManager.LoadScene("Creditos");
     }
+    void Death()
+    {
 
+        DeathPanel.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+
+
+    }
 }

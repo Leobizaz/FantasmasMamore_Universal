@@ -45,6 +45,11 @@ public class FPSControlFinal : MonoBehaviour
         Save();
     }
 
+    private void Update()
+    {
+        sensitivity = VolumeBrightness.Saved_sensibilidade;
+    }
+
     void FixedUpdate()
     {
         if (moveLock) CameraRun.speed = 0f;
