@@ -28,6 +28,8 @@ public class FPSControlFinal : MonoBehaviour
 
     Animator anim;
 
+    public GameObject lamparinasave;
+
     private void Start()
     {
         Time.timeScale = 1;
@@ -40,6 +42,7 @@ public class FPSControlFinal : MonoBehaviour
         //moveLock = true;
         player.enabled = false;
         Invoke("Disconnect", 6f);
+        Save();
     }
 
     void FixedUpdate()
@@ -103,7 +106,7 @@ public class FPSControlFinal : MonoBehaviour
 
     public void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Enemy")
+        if (col.gameObject.tag == "Enemy" && !Cheats.invincible)
         {
             anim.SetInteger("State", 1);
             moveLock = true;
@@ -122,7 +125,7 @@ public class FPSControlFinal : MonoBehaviour
 
     public void Disconnect()
     {
-        
+        GetComponent<CutsceneLookControl>().WideScreenInF();
         transform.parent.gameObject.transform.SetParent(null, true);
         //transform.parent.gameObject.transform.localPosition = Vector3.zero;
         //transform.localPosition = Vector3.zero;
@@ -130,5 +133,16 @@ public class FPSControlFinal : MonoBehaviour
 
         //moveLock = false;
 
+    }
+
+    public void Save()
+    {
+        lamparinasave.SetActive(true);
+        Invoke("DesativaLamparina", 5f);
+    }
+
+    void DesativaLamparina()
+    {
+        lamparinasave.SetActive(false);
     }
 }

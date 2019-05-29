@@ -141,6 +141,7 @@ public class ControleTempoGalpao : MonoBehaviour
         //Cursor.visible = true;
         if (!abriu)
         {
+            GameObject.Find("Player Ato 1").GetComponent<FPSControl>().Save();
             abriu = true;
             Globals.playerProgress = 4;
             portasAbre.Play("open");

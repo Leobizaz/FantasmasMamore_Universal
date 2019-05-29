@@ -187,6 +187,7 @@ ModelImporter:
     100362: Vidro2 8
     100364: Vidro2 9
     100366: VidroB3
+    100368: Casa2
     400000: //RootNode
     400002: "Ma\xE7aneta"
     400004: "Ma\xE7aneta 1"
@@ -371,6 +372,7 @@ ModelImporter:
     400362: Vidro2 8
     400364: Vidro2 9
     400366: VidroB3
+    400368: Casa2
     2100000: TXT_MadeiraEscura
     2100002: TXT_Metal
     2100004: TXT_Vidro
@@ -538,6 +540,7 @@ ModelImporter:
     2300306: Vidro2 8
     2300308: Vidro2 9
     2300310: VidroB3
+    2300312: Casa2
     3300000: "Ma\xE7aneta"
     3300002: "Ma\xE7aneta 1"
     3300004: MetalPorta
@@ -694,6 +697,7 @@ ModelImporter:
     3300306: Vidro2 8
     3300308: Vidro2 9
     3300310: VidroB3
+    3300312: Casa2
     4300000: PortDir1
     4300002: MetalPorta
     4300004: PortDir2
@@ -850,6 +854,7 @@ ModelImporter:
     4300306: pCube6
     4300308: Vidro2
     4300310: Vidro1
+    4300312: Casa2
   externalObjects:
   - first:
       type: UnityEngine:Material

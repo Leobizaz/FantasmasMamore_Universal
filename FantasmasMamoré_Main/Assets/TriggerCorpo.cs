@@ -14,7 +14,17 @@ public class TriggerCorpo : MonoBehaviour
             {
                 firstTime = true;
                 GameObject.Find("Controle_AtoFinal").GetComponent<ControleAtoFinal>().BeginChase();
+                return;
             }
+
+            if(Input.GetButtonDown("Fire1") && firstTime)
+            {
+                GameObject.Find("Controle_AtoFinal").GetComponent<ControleAtoFinal>().End();
+            }
+
+
+
+
         }
     }
 }

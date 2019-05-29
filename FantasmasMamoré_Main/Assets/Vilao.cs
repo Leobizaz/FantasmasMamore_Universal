@@ -8,20 +8,23 @@ public class Vilao : MonoBehaviour
     VilaoSounds dialogue;
     NavMeshAgent AI;
     LookIfClose lookScript;
+    Animator anim;
     public GameObject player;
 
+    bool barricada;
     bool chasing;
 
     private void Awake()
     {
         dialogue = GetComponent<VilaoSounds>();
         AI = GetComponent<NavMeshAgent>();
-        lookScript = GetComponent<LookIfClose>();
+        lookScript = transform.parent.GetComponent<LookIfClose>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        if(chasing)
+        if (chasing)
             AI.SetDestination(player.transform.position);
     }
 
@@ -57,6 +60,30 @@ public class Vilao : MonoBehaviour
 
     public void EnableAI()
     {
+        //lookScript.enabled = false;
+        transform.SetParent(null, true);
         chasing = true;
     }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "Barricada")
+        {
+            barricada = true;
+            anim.SetBool("isBashing", true);
+        }
+        else
+        {
+            if (!IsInvoking("Test"))
+                Invoke("Test", 0.1f);
+        }
+
+    }
+
+    void Test()
+    {
+        barricada = false;
+        anim.SetBool("isBashing", false);
+    }
 }
+

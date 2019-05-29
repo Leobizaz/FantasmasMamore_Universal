@@ -38,6 +38,7 @@ public class FPSControl : MonoBehaviour {
     public AudioClip voz3;
     public GameObject thomas;
     public GameController_Ato_1 killme;
+    public GameObject lamparinasave;
 
     CutsceneLookControl cutscene;
 
@@ -71,6 +72,7 @@ public class FPSControl : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+
         cutscene = GetComponent<CutsceneLookControl>();
         playerState = GetComponent<PlayerState>();
         player = this.GetComponent<CharacterController>();
@@ -82,6 +84,7 @@ public class FPSControl : MonoBehaviour {
 
         if (Globals.playerProgress == 0)
         {
+            Save();
             anim.Play("Cutscene Inicial");
             audio.Play();
             ObjetivoGlobal.Objetivo = "Investigar a casa.";
@@ -239,7 +242,7 @@ public class FPSControl : MonoBehaviour {
 
     public void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.tag == "Enemy")
+        if(col.gameObject.tag == "Enemy" && !Cheats.invincible)
         {
             anim.SetInteger ("State", 1);
             moveLock = true;
@@ -258,6 +261,7 @@ public class FPSControl : MonoBehaviour {
     {
         if(col.gameObject.tag == "Ledge" && !ledge)
         {
+            Save();
             ledge = true;
             //moveLock = true;
             TeleportPlayer(261.08f, 66.57f, 321.93f, 0, -91.84f, 0);
@@ -392,6 +396,7 @@ public class FPSControl : MonoBehaviour {
         transform.parent.gameObject.transform.localRotation = Quaternion.Euler(0, 90, 0);
 
         moveLock = true;
+        Globals.playerProgress = 5;
         //moveLock = true;
         Invoke("FadeOut", 8f);
         Invoke("LoadStation", 12f);
@@ -404,6 +409,7 @@ public class FPSControl : MonoBehaviour {
 
     public void AiMeuDeusNao()
     {
+        Save();
         aimdsnao.SetActive(true);
     }
 
@@ -420,6 +426,17 @@ public class FPSControl : MonoBehaviour {
     public void AtualizaOObjetivo()
     {
         objetivo.AtualizaObjetivo();
+    }
+
+    public void Save()
+    {
+        lamparinasave.SetActive(true);
+        Invoke("DesativaLamparina", 5f);
+    }
+
+    void DesativaLamparina()
+    {
+        lamparinasave.SetActive(false);
     }
 
 

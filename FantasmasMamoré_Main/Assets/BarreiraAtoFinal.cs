@@ -14,7 +14,7 @@ public class BarreiraAtoFinal : MonoBehaviour
     public Vector3 tabuaLocation;
     public Vector3 tabuaRotation;
     GameObject StoredTabua;
-    bool stored;
+    public bool stored;
 
     private void Update()
     {
@@ -87,7 +87,7 @@ public class BarreiraAtoFinal : MonoBehaviour
     void HitaMadeira(GameObject tabua)
     {
         //Instancia som e efeito
-        //Instantiate(fxHit, tabua.transform.position, Quaternion.identity);
+        Instantiate(fxHit, tabua.transform.position, Quaternion.identity);
         //
         health--;
         hitCooldown = true;
@@ -97,7 +97,7 @@ public class BarreiraAtoFinal : MonoBehaviour
     void QuebraMadeira(GameObject tabua)
     {
         //Instancia som e efeito
-        //Instantiate(fx, tabua.transform.position, Quaternion.identity);
+        Instantiate(fx, tabua.transform.position, Quaternion.identity);
         //
         health = maxHealth;
         Destroy(tabua);
