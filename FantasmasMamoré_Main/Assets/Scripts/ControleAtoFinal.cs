@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ControleAtoFinal : MonoBehaviour
 {
-    private GameObject vilao;
+    public GameObject vilao;
     private Vilao vilaoScript;
     private Animator vilaoAnimator;
     public Animator portaMeio;
@@ -21,13 +21,12 @@ public class ControleAtoFinal : MonoBehaviour
     public GameObject voltandoPraCasa;
     public GameObject victoryFx;
     public GameObject jojo;
-
+    public Animator fadeOut;
 
 
     private void Awake()
     {
-        GameObject.Find("FadeOut").GetComponent<Animator>().Play("FadeIn");
-        vilao = GameObject.Find("Vilao");
+        fadeOut.Play("FadeIn");
         vilaoScript = vilao.GetComponent<Vilao>();
         vilaoAnimator = vilao.GetComponent<Animator>();
 

@@ -6,13 +6,13 @@ public class AudioOnPickup : MonoBehaviour
 {
     public static bool discovered;
     private AudioSource audio;
-    private AudioSource audiodialogo;
     private bool once;
+
+    public AudioSource playerdialogo;
 
     void Start()
     {
         audio = GetComponent<AudioSource>();
-        audiodialogo = GameObject.Find("Trigger_casa").GetComponent<AudioSource>();
     }
 
     void Update()
@@ -22,7 +22,7 @@ public class AudioOnPickup : MonoBehaviour
             if (gameObject.transform.parent.gameObject.name == "hand" && !once && discovered)
             {
                 once = true;
-                if(!audiodialogo.isPlaying)
+                if(!playerdialogo.isPlaying)
                     audio.Play();
             }
         }

@@ -31,7 +31,7 @@ public class PlayerState : MonoBehaviour
 
 
         playerProgress = Globals.playerProgress;
-        Debug.Log(Globals.playerProgress);
+        //Debug.Log(Globals.playerProgress);
 
     }
 

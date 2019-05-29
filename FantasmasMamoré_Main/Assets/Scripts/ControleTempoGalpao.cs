@@ -94,7 +94,7 @@ public class ControleTempoGalpao : MonoBehaviour
             }
 
         }
-        print(Timeleft);
+        //print(Timeleft);
     }
 
     public void StartEvent()

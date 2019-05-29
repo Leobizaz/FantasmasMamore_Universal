@@ -38,7 +38,7 @@ public class Globals : MonoBehaviour
                 UnPause();
             }
         }
-        print(Time.timeScale);
+        //print(Time.timeScale);
     }
 
     public void PannelOff()

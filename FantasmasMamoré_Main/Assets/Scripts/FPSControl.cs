@@ -220,7 +220,7 @@ public class FPSControl : MonoBehaviour {
     {
         //while (true)
         //{
-            Debug.Log("Stopping");
+            //Debug.Log("Stopping");
           //  speedfactor = speedfactor - (acceleration*3);
             //speed = speedfactor * 1.6f;
             //speedfactor = Mathf.Clamp(speedfactor, 1, 3);

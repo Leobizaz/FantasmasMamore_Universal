@@ -20,6 +20,7 @@ public class GameController_Ato_1 : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1;
         AI_Enabled = false;
         dialogueIndex = 0;
         Cursor.visible = true;
