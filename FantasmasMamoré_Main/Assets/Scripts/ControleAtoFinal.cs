@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControleAtoFinal : MonoBehaviour
 {
@@ -165,7 +166,7 @@ public class ControleAtoFinal : MonoBehaviour
 
     void LoadCredits()
     {
-
+        SceneManager.LoadScene("Creditos");
     }
 
 }
