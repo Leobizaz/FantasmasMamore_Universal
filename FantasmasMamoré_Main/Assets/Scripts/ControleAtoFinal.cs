@@ -23,10 +23,12 @@ public class ControleAtoFinal : MonoBehaviour
     public GameObject victoryFx;
     public GameObject jojo;
     public Animator fadeOut;
+    public static bool cantdie;
     public TOD_Sky skytime;
 
     private void Awake()
     {
+        cantdie = false;
         skytime.Cycle.Hour = 19.1f;
         FPSControlFinal.alive = true;
         Cursor.lockState = CursorLockMode.Locked;
@@ -139,6 +141,7 @@ public class ControleAtoFinal : MonoBehaviour
 
     public void End()
     {
+        cantdie = true;
         jojo.SetActive(true);
         musica.SetActive(false);
         CancelInvoke("Reply2");

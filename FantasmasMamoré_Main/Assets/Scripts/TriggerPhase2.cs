@@ -6,7 +6,7 @@ public class TriggerPhase2 : MonoBehaviour
 {
     public TutorialController tutorial;
     public GameObject dialogo;
-    public AudioSource taBem;
+  
     public GameObject TaB;
 
 
@@ -17,7 +17,7 @@ public class TriggerPhase2 : MonoBehaviour
             dialogo.SetActive(true);
             tutorial.Phase3();
 
-                taBem.Play();
+                //taBem.Play();
                 Invoke("Destroy", 7f);
             
             //Destroy(gameObject);

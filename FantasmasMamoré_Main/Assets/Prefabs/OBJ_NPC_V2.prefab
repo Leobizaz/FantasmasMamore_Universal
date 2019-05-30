@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7397955707858423231}
   - component: {fileID: 3726742104582312621}
   m_Layer: 0
-  m_Name: NPC_2
+  m_Name: OBJ_NPC_V2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,6 +32,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8823674394874525888}
+  - {fileID: 6894261186600025372}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -129,6 +130,81 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &6894261186599626652
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 495092401149359539}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+      propertyPath: m_Name
+      value: Digging (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.176
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.796
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.058
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.65824234
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.75280607
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 82.332
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 49c7db240df8996409c750c42ec897e6, type: 2}
+    - target: {fileID: 13700000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d9ed8291b2895d459b6499f136efa94, type: 2}
+    - target: {fileID: 13700000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 404b6a9bb10a3b64395bb1d46e62829e, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 25ba2d28e6c42034890b6d8b24990313, type: 3}
+--- !u!4 &6894261186600025372 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 25ba2d28e6c42034890b6d8b24990313,
+    type: 3}
+  m_PrefabInstance: {fileID: 6894261186599626652}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8823674394874389060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -139,6 +215,10 @@ PrefabInstance:
     - target: {fileID: 100004, guid: 1da692f5cfbeebc47a20f31070122876, type: 3}
       propertyPath: m_Name
       value: Digging
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 1da692f5cfbeebc47a20f31070122876, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1da692f5cfbeebc47a20f31070122876, type: 3}
       propertyPath: m_LocalPosition.x

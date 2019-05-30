@@ -1,0 +1,196 @@
+fileFormatVersion: 2
+guid: 25ba2d28e6c42034890b6d8b24990313
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: npc_cornocv:Head
+    100004: npc_cornocv:HeadTop_End
+    100006: npc_cornocv:Hips
+    100008: npc_cornocv:LeftArm
+    100010: npc_cornocv:LeftFoot
+    100012: npc_cornocv:LeftForeArm
+    100014: npc_cornocv:LeftHand
+    100016: npc_cornocv:LeftHandIndex1
+    100018: npc_cornocv:LeftHandIndex2
+    100020: npc_cornocv:LeftHandIndex3
+    100022: npc_cornocv:LeftHandIndex4
+    100024: npc_cornocv:LeftLeg
+    100026: npc_cornocv:LeftShoulder
+    100028: npc_cornocv:LeftToe_End
+    100030: npc_cornocv:LeftToeBase
+    100032: npc_cornocv:LeftUpLeg
+    100034: npc_cornocv:Neck
+    100036: npc_cornocv:polySurface2
+    100038: npc_cornocv:RightArm
+    100040: npc_cornocv:RightFoot
+    100042: npc_cornocv:RightForeArm
+    100044: npc_cornocv:RightHand
+    100046: npc_cornocv:RightHandIndex1
+    100048: npc_cornocv:RightHandIndex2
+    100050: npc_cornocv:RightHandIndex3
+    100052: npc_cornocv:RightHandIndex4
+    100054: npc_cornocv:RightLeg
+    100056: npc_cornocv:RightShoulder
+    100058: npc_cornocv:RightToe_End
+    100060: npc_cornocv:RightToeBase
+    100062: npc_cornocv:RightUpLeg
+    100064: npc_cornocv:Spine
+    100066: npc_cornocv:Spine1
+    100068: npc_cornocv:Spine2
+    400000: //RootNode
+    400002: npc_cornocv:Head
+    400004: npc_cornocv:HeadTop_End
+    400006: npc_cornocv:Hips
+    400008: npc_cornocv:LeftArm
+    400010: npc_cornocv:LeftFoot
+    400012: npc_cornocv:LeftForeArm
+    400014: npc_cornocv:LeftHand
+    400016: npc_cornocv:LeftHandIndex1
+    400018: npc_cornocv:LeftHandIndex2
+    400020: npc_cornocv:LeftHandIndex3
+    400022: npc_cornocv:LeftHandIndex4
+    400024: npc_cornocv:LeftLeg
+    400026: npc_cornocv:LeftShoulder
+    400028: npc_cornocv:LeftToe_End
+    400030: npc_cornocv:LeftToeBase
+    400032: npc_cornocv:LeftUpLeg
+    400034: npc_cornocv:Neck
+    400036: npc_cornocv:polySurface2
+    400038: npc_cornocv:RightArm
+    400040: npc_cornocv:RightFoot
+    400042: npc_cornocv:RightForeArm
+    400044: npc_cornocv:RightHand
+    400046: npc_cornocv:RightHandIndex1
+    400048: npc_cornocv:RightHandIndex2
+    400050: npc_cornocv:RightHandIndex3
+    400052: npc_cornocv:RightHandIndex4
+    400054: npc_cornocv:RightLeg
+    400056: npc_cornocv:RightShoulder
+    400058: npc_cornocv:RightToe_End
+    400060: npc_cornocv:RightToeBase
+    400062: npc_cornocv:RightUpLeg
+    400064: npc_cornocv:Spine
+    400066: npc_cornocv:Spine1
+    400068: npc_cornocv:Spine2
+    2100000: npc_cornocv_polySurface1SG
+    2100002: initialShadingGroup
+    4300000: npc_cornocv:polySurface2
+    7400000: mixamo.com
+    9500000: //RootNode
+    13700000: npc_cornocv:polySurface2
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: mixamo.com
+      takeName: mixamo.com
+      firstFrame: 0
+      lastFrame: 145
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 9
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.089999996
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

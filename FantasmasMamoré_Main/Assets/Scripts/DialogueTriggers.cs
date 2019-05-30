@@ -10,9 +10,11 @@ public class DialogueTriggers : MonoBehaviour
     public ObjetivoGlobal objetivo;
     public bool objetivado;
     private bool once;
+    public bool tutorial;
 
     void Start()
     {
+        if(!tutorial)
         playeraudio = GameObject.Find("Player Ato 1").GetComponent<AudioSource>();
     }
 

@@ -71,7 +71,7 @@ public class TutorialController : MonoBehaviour
         controller.transform.position = new Vector3(-103f, 1.08f, -8.5f); //Teleporta o jogador
         //player.transform.position = new Vector3(-103f, 1.08f, -8.5f);
         controller.enabled = true;
-        sky.Cycle.Hour = 11.18f; //Muda o tempo do dia
+        sky.Cycle.Hour = 12.18f; //Muda o tempo do dia
         phase1.SetActive(false);
         LoadPhase2(); //Carrega os assets da segunda phase
         fadeAnim.Play("FadeIn");

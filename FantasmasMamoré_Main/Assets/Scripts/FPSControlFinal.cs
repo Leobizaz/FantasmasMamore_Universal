@@ -111,7 +111,7 @@ public class FPSControlFinal : MonoBehaviour
 
     public void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Enemy" && !Cheats.invincible)
+        if (col.gameObject.tag == "Enemy" && !Cheats.invincible && !ControleAtoFinal.cantdie)
         {
             anim.SetInteger("State", 1);
             moveLock = true;
