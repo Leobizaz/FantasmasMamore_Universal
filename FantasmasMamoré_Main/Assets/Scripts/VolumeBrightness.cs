@@ -52,6 +52,10 @@ public class VolumeBrightness : MonoBehaviour
         sliderVozes.value = Saved_volumeVozes;
         sliderMusica.value = Saved_volumeMusica;
         sliderSensibilidade.value = Saved_sensibilidade;
+        volumeEfeitos = Saved_volumeEfeitos;
+        volumeVozes = Saved_volumeVozes;
+        volumeMusica = Saved_volumeMusica;
+        sensibilidade = sliderSensibilidade.value;
     }
 
     void SetSavedOptions()

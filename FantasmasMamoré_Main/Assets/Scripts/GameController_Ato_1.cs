@@ -90,8 +90,9 @@ public class GameController_Ato_1 : MonoBehaviour
     void Death()
     {
       
-            DeathPanel.SetActive(true);
+        DeathPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         
 
     }

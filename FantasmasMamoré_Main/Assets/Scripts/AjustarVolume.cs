@@ -20,7 +20,7 @@ public class AjustarVolume : MonoBehaviour
         audiosource = gameObject.GetComponent<AudioSource>();
     }
 
-    void Update()
+    void LateUpdate()
     {
         GetSavedVolumeOptions();
 

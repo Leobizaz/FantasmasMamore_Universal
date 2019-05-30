@@ -45,7 +45,7 @@ public class TutorialController : MonoBehaviour
     {
         Cursor.visible = false;
         Invoke("UI_Tutorial_andar", 4f);
-        txtObjetivo.text = "Siga o trabalhador até o local de trabalho.";
+        txtObjetivo.text = "Preciso seguir Jorge até o local de trabalho.";
     }
 
     private void Update()
@@ -57,7 +57,7 @@ public class TutorialController : MonoBehaviour
     {
         //fade out
         fadeAnim.Play("FadeOut");
-        txtObjetivo.text = "Leve três tábuas para seu colega de trabalho.";
+        txtObjetivo.text = "Preciso levar 3 tábuas pro Sérgio, que está cavando.";
         Invoke("TeleportPlayer_phase2", 2f);
         phase2.SetActive(true);
         UI_tutorial_andar.SetActive(false);
@@ -101,7 +101,7 @@ public class TutorialController : MonoBehaviour
         phase3.SetActive(true);
         //sky.Cycle.Hour = 17.18f;
         fadeAnim.Play("FadeIn");
-        txtObjetivo.text = "Volte para a vila dos trabalhadores pelos trilhos do trem.";
+        txtObjetivo.text = "Vou voltar para a vila dos trabalhadores pelos trilhos do trem.";
         Invoke("UpdateObjetivo", 6f);
         controller.enabled = false;
         controller.transform.position = new Vector3(-112.7f, 1.08f, 9.86f); 

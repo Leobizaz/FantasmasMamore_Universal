@@ -32,6 +32,7 @@ public class ControleAtoFinal : MonoBehaviour
         skytime.Cycle.Hour = 19.1f;
         FPSControlFinal.alive = true;
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         fadeOut.Play("FadeIn");
         vilaoScript = vilao.GetComponent<Vilao>();
         vilaoAnimator = vilao.GetComponent<Animator>();
@@ -182,6 +183,7 @@ public class ControleAtoFinal : MonoBehaviour
     {
         DeathPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void BackToMenu()

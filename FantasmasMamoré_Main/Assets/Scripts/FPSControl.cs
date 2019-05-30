@@ -73,7 +73,8 @@ public class FPSControl : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         cutscene = GetComponent<CutsceneLookControl>();
         playerState = GetComponent<PlayerState>();
         player = this.GetComponent<CharacterController>();
