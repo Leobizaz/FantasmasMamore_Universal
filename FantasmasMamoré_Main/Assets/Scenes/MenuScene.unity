@@ -55885,6 +55885,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheater
       objectReference: {fileID: 0}
+    - target: {fileID: 4750957306112598350, guid: 1a672c9306004144fa915f28649ff55b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5618293922538830755, guid: 1a672c9306004144fa915f28649ff55b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67291,16 +67296,6 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9218900080900637311, guid: 2fc4fff5d14e3fc4e8263743034ffffc,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9218900080900637311, guid: 2fc4fff5d14e3fc4e8263743034ffffc,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9218900081146590902, guid: 2fc4fff5d14e3fc4e8263743034ffffc,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -67377,6 +67372,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9218900082406675887, guid: 2fc4fff5d14e3fc4e8263743034ffffc,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218900080900637311, guid: 2fc4fff5d14e3fc4e8263743034ffffc,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218900080900637311, guid: 2fc4fff5d14e3fc4e8263743034ffffc,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
