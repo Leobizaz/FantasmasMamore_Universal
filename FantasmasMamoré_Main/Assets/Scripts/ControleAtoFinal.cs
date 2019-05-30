@@ -27,6 +27,7 @@ public class ControleAtoFinal : MonoBehaviour
 
     private void Awake()
     {
+        FPSControlFinal.alive = true;
         Cursor.lockState = CursorLockMode.Locked;
         fadeOut.Play("FadeIn");
         vilaoScript = vilao.GetComponent<Vilao>();
