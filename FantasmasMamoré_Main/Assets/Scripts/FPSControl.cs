@@ -264,7 +264,7 @@ public class FPSControl : MonoBehaviour {
         {
             Save();
             ledge = true;
-            //moveLock = true;
+            moveLock = true;
             TeleportPlayer(261.08f, 66.57f, 321.93f, 0, -91.84f, 0);
             anim.Play("Ledge");
             ObjetivoGlobal.Objetivo = "Encontre um caminho alternativo para voltar à vila";
