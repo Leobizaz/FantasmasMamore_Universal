@@ -23,10 +23,11 @@ public class ControleAtoFinal : MonoBehaviour
     public GameObject victoryFx;
     public GameObject jojo;
     public Animator fadeOut;
-
+    public TOD_Sky skytime;
 
     private void Awake()
     {
+        skytime.Cycle.Hour = 19.1f;
         FPSControlFinal.alive = true;
         Cursor.lockState = CursorLockMode.Locked;
         fadeOut.Play("FadeIn");

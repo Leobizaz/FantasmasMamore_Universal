@@ -45389,6 +45389,7 @@ MonoBehaviour:
   victoryFx: {fileID: 1910789805}
   jojo: {fileID: 1913320351}
   fadeOut: {fileID: 561216812654797356}
+  skytime: {fileID: 1777165708}
 --- !u!4 &962009673
 Transform:
   m_ObjectHideFlags: 0
