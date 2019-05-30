@@ -25,6 +25,11 @@ public class FPSControlTutorial : MonoBehaviour {
 
     private bool faseTres = false;
 
+    void Awake()
+    {
+        faseTres = false;
+    }
+
     // Use this for initialization
     void Start () {
         player = this.GetComponent<CharacterController>();

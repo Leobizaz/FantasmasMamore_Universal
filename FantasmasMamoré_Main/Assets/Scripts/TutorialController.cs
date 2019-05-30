@@ -101,7 +101,7 @@ public class TutorialController : MonoBehaviour
         phase3.SetActive(true);
         //sky.Cycle.Hour = 17.18f;
         fadeAnim.Play("FadeIn");
-        txtObjetivo.text = "Volte para a vila dos trabalhadores pela trilha por onde você veio.";
+        txtObjetivo.text = "Volte para a vila dos trabalhadores pelos trilhos do trem.";
         Invoke("UpdateObjetivo", 6f);
         controller.enabled = false;
         controller.transform.position = new Vector3(-112.7f, 1.08f, 9.86f); 
@@ -179,6 +179,10 @@ public class TutorialController : MonoBehaviour
     public void AtivaObj()
     {
         obj.SetActive(true);
+    }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
     }
 
 }
