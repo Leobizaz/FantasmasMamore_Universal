@@ -6,7 +6,7 @@ public class Forcefield : MonoBehaviour
 {
     public GameObject vilao;
     Renderer renderer;
-    SphereCollider collider;
+    CapsuleCollider collider;
     private Color maxAlpha = new Color(0, 255, 235, 0.2f);
     private Color minAlpha = new Color(0, 255, 235, 0);
     [SerializeField] private Color currentColor;
@@ -17,7 +17,7 @@ public class Forcefield : MonoBehaviour
     private void Awake()
     {
         renderer = GetComponent<Renderer>();
-        collider = GetComponent<SphereCollider>();
+        collider = GetComponent<CapsuleCollider>();
     }
 
     private void Update()

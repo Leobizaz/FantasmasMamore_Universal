@@ -21,6 +21,10 @@ public class CarrinhoCollection : MonoBehaviour
     private GameObject objEngrenagem;
     private GameObject objRoda;
 
+    public GameObject somAlavanca;
+    public GameObject somEngrenagem;
+    public GameObject somRoda;
+
     void Start()
     {
         carrinho = transform.parent.gameObject;
@@ -91,6 +95,7 @@ public class CarrinhoCollection : MonoBehaviour
         objAlavanca.transform.position = objAlavanca.transform.parent.gameObject.transform.position;
         objAlavanca.transform.localPosition = new Vector3(0.00f, 0.876f, -0.011f);
         objAlavanca.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        somAlavanca.SetActive(true);
     }
 
     void SetPositionEngrenagem()
@@ -101,6 +106,7 @@ public class CarrinhoCollection : MonoBehaviour
         objEngrenagem.transform.position = objEngrenagem.transform.parent.gameObject.transform.position;
         objEngrenagem.transform.localPosition = new Vector3(-0.051f, -0.379f, -0f);
         objEngrenagem.transform.localRotation = Quaternion.Euler(90, 0, 90);
+        somEngrenagem.SetActive(true);
     }
 
     void SetPositionRoda()
@@ -111,6 +117,7 @@ public class CarrinhoCollection : MonoBehaviour
         objRoda.transform.position = objRoda.transform.parent.gameObject.transform.position;
         objRoda.transform.localPosition = new Vector3(1.213f, -0.1462065f, -1.072f);
         objRoda.transform.localRotation = Quaternion.Euler(0, 0, -90);
+        somRoda.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)

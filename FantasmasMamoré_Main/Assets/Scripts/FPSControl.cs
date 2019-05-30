@@ -25,6 +25,7 @@ public class FPSControl : MonoBehaviour {
     public GameObject aimdsnao;
     public GameObject falaRespawn;
     public Animator fadeOut;
+    public GameObject somMove;
     bool ledge;
 
     public ControleTempoGalpao controleTempo;
@@ -384,7 +385,7 @@ public class FPSControl : MonoBehaviour {
     public void ToStation()
     {
         player.enabled = false;
-
+        Invoke("SomCarrinho", 2f);
         //TeleportPlayer(-119.213f, 52.4f, 0.15f, 0, -180f, 0);
 
         transform.parent.gameObject.transform.parent = GameObject.Find("Carrinho").transform;
@@ -402,6 +403,11 @@ public class FPSControl : MonoBehaviour {
         Invoke("LoadStation", 12f);
     }
 
+    void SomCarrinho()
+    {
+        somMove.SetActive(true);
+    }
+
     public void VilaoAnimation()
     {
         vilao.transform.GetComponentInChildren<Animator>().Play("charge");
@@ -410,7 +416,7 @@ public class FPSControl : MonoBehaviour {
     public void AiMeuDeusNao()
     {
         Save();
-        aimdsnao.SetActive(true);
+        //aimdsnao.SetActive(true);
     }
 
     public void FadeOut()

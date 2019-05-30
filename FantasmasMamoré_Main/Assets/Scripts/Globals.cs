@@ -10,6 +10,13 @@ public class Globals : MonoBehaviour
     public static int playerProgress = 0;
     public static float photoscollected;
 
+    public static bool photo1;
+    public static bool photo2;
+    public static bool photo3;
+    public static bool photo4;
+    public static bool photo5;
+
+
     public GameObject player;
     private FPSControl playerScript;
     private FPSControlTutorial playerScriptTutorial;

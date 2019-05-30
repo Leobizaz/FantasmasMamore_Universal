@@ -19,9 +19,9 @@ public class EnableCarrinho : MonoBehaviour
             AudioOnPickup.discovered = true;
             script.ready = true;
 
-            roda.GetComponent<Renderer>().material.SetFloat("_FirstOutlineWidth", 0.02f);
-            alavanca.GetComponent<Renderer>().material.SetFloat("_FirstOutlineWidth", 0.02f);
-            engrenagem.GetComponent<Renderer>().material.SetFloat("_FirstOutlineWidth", 0.02f);
+            roda.GetComponent<Renderer>().material.SetFloat("_FirstOutlineWidth", 0.05f);
+            alavanca.GetComponent<Renderer>().material.SetFloat("_FirstOutlineWidth", 0.05f);
+            engrenagem.GetComponent<Renderer>().material.SetFloat("_FirstOutlineWidth", 0.05f);
 
         }
     }

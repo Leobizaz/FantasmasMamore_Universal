@@ -149,7 +149,7 @@ public class ControleAtoFinal : MonoBehaviour
         Time.timeScale = 0.5f;
         victoryFx.SetActive(true);
         Invoke("FadeOut", 8f);
-        Invoke("LoadCredits", 10f);
+        Invoke("LoadCredits", 13f);
     }
 
     public void EndSequence()

@@ -9,6 +9,8 @@ public class MulherBehaviour : MonoBehaviour
     public Animator anim;
     private NavMeshAgent agent;
     private AudioSource audio;
+    public GameObject particleFX;
+    bool once;
 
     void Start()
     {
@@ -21,7 +23,11 @@ public class MulherBehaviour : MonoBehaviour
         if (die)
         {
             transform.localScale = new Vector3(transform.localScale.x - 0.05f, transform.localScale.y - 0.05f, transform.localScale.z - 0.05f);
-            Invoke("Destroy", 1.5f);
+            if (!once)
+            {
+                once = true;
+                Invoke("Destroy", 0.6f);
+            }
         }
     }
 
@@ -58,6 +64,7 @@ public class MulherBehaviour : MonoBehaviour
 
     public void Destroy()
     {
+        Instantiate(particleFX, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 

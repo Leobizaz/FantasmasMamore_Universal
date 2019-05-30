@@ -44,7 +44,7 @@ public class FechaGalpao : MonoBehaviour
             Invoke("Cu", 6f);
             //Destroy(this.gameObject);
             Invoke("AudioMulher", 1f);
-            Invoke("KillMulher", 3f);
+            Invoke("KillMulher", 2.5f);
             Invoke("Xisde", 3f);
             Globals.playerProgress = 3;
         }

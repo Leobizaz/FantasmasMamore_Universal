@@ -70,7 +70,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if(collision.gameObject.tag == "Interactable" && (collision.gameObject.name == "Barreira1" || (collision.gameObject.name == "Barreira2")))
+        if(collision.gameObject.tag == "Barricada" || collision.gameObject.tag == "Interactable")
         {
             barricada = true;
             anim.SetBool("isBashing", true);

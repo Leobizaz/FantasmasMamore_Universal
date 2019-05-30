@@ -13,6 +13,7 @@ public class VilaoSounds : MonoBehaviour
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
             s.source.spatialBlend = 1;
+            s.source.minDistance = 3.5f;
             s.source.maxDistance = 15f;
             s.source.volume = VolumeBrightness.Saved_volumeVozes;
             s.source.pitch = s.pitch;
