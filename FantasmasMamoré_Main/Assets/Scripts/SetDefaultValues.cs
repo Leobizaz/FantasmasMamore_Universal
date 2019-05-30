@@ -11,7 +11,7 @@ public class SetDefaultValues : MonoBehaviour
     {
         Time.timeScale = 1f;
         VolumeBrightness.Saved_brilho = 0.2f;
-        VolumeBrightness.Saved_volumeMusica = 0.5f;
+        VolumeBrightness.Saved_volumeMusica = 0.3f;
         VolumeBrightness.Saved_volumeVozes = 1f;
         VolumeBrightness.Saved_volumeEfeitos = 0.2f;
         QualitySettings.SetQualityLevel(3);

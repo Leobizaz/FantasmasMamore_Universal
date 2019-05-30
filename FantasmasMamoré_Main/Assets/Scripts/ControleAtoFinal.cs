@@ -27,6 +27,7 @@ public class ControleAtoFinal : MonoBehaviour
 
     private void Awake()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         fadeOut.Play("FadeIn");
         vilaoScript = vilao.GetComponent<Vilao>();
         vilaoAnimator = vilao.GetComponent<Animator>();
@@ -174,10 +175,18 @@ public class ControleAtoFinal : MonoBehaviour
     }
     void Death()
     {
-
         DeathPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
+    }
 
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
 
+    public void Retry()
+    {
+        FPSControlFinal.alive = true;
+        SceneManager.LoadScene("LoadingScreenAtoFinal");
     }
 }
