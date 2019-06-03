@@ -5,6 +5,7 @@ using UnityEngine;
 public class Forcefield : MonoBehaviour
 {
     public GameObject vilao;
+    public GameObject line;
     Renderer renderer;
     CapsuleCollider collider;
     private Color maxAlpha = new Color(0, 255, 235, 0.2f);
@@ -33,9 +34,11 @@ public class Forcefield : MonoBehaviour
         if (distance >= 110f)
         {
             collider.enabled = false;
+            line.SetActive(false);
         }
         else
         {
+            line.SetActive(true);
             collider.enabled = true;
         }
     }
