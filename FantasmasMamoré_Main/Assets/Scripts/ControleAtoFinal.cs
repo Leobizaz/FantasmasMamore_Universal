@@ -99,6 +99,7 @@ public class ControleAtoFinal : MonoBehaviour
         vilaoScript.StopDiscurso();
         vilaoAnimator.Play("gesture_agree");
         vilaoScript.TardeDemais();
+        TriggerCorpo.firstTime = true;
         Invoke("Walcc", 9f);
     }
 

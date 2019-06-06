@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class TriggerCorpo : MonoBehaviour
 {
-    bool firstTime;
+    public static bool firstTime;
     bool secondTime;
+
+    private void Start()
+    {
+        firstTime = false;
+    }
 
     private void OnMouseOver()
     {

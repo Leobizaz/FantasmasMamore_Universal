@@ -22,7 +22,16 @@ public class BarreiraAtoFinal : MonoBehaviour
         if (stored) collider.enabled = true;
         else collider.enabled = false;
 
-        if (index > 0) stored = true; else stored = false;
+        if (index > 0)
+        {
+            this.gameObject.tag = "Interactable";
+            stored = true;
+        }
+        else
+        {
+            this.gameObject.tag = "Untagged";
+            stored = false;
+        }
 
     }
 
@@ -40,7 +49,7 @@ public class BarreiraAtoFinal : MonoBehaviour
             other.attachedRigidbody.isKinematic = true;
             other.attachedRigidbody.useGravity = false;
             other.attachedRigidbody.constraints = RigidbodyConstraints.FreezeAll;
-            this.gameObject.tag = "Interactable";
+            
             health = maxHealth;
             index++;
         }
@@ -65,7 +74,7 @@ public class BarreiraAtoFinal : MonoBehaviour
             StoredTabua[index-1].transform.position = droplocation;
             index--;
             //stored = false;
-            this.gameObject.tag = "Untagged";
+            
         }
     }
 
@@ -75,12 +84,12 @@ public class BarreiraAtoFinal : MonoBehaviour
         {
             if (!hitCooldown)
             {
-                HitaMadeira(StoredTabua[index]);
+                HitaMadeira(StoredTabua[index-1]);
             }
 
             if (health == 0)
             {
-                QuebraMadeira(StoredTabua[index]);
+                QuebraMadeira(StoredTabua[index-1]);
             }
         }
     }
